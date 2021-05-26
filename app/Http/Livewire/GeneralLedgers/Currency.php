@@ -12,7 +12,10 @@ class Currency extends Component
 
     public function render()
     {
-        return view('livewire.general-ledgers.currency');
+        return view('livewire.general-ledgers.currency', [
+            'currencies' => GeneralLedgersCurrency::orderBy('id', 'desc')->paginate(10)
+        ]);
+        //return view('livewire.general-ledgers.currency');
     }
 
     public function create()
