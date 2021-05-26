@@ -18,6 +18,9 @@
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "postcss-import": "^14.0.1",
-        "tailwindcss": "^2.0.1"
+        "tailwindcss": "^2.1.2"
+    },
+    "dependencies": {
+        "@moesaid/cleopatra": "^1.1.1"
     }
 }

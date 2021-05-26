@@ -15,6 +15,15 @@ class CreateAccountsTable extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
+            $table->string('account_no',20);
+            $table->string('account_name',120);
+            $table->integer('account_type')->default(0);
+            $table->integer('can_jurnal')->default(0);
+            $table->integer('parent_account_id')->default(0);
+            $table->decimal('account_balance',18,2)->default(0);
+            $table->integer('status')->default(0);
+            $table->integer('created_by');
+            $table->integer('updated_by')->default(0);
             $table->timestamps();
         });
     }
