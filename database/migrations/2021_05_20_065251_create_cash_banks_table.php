@@ -15,6 +15,16 @@ class CreateCashBanksTable extends Migration
     {
         Schema::create('cash_banks', function (Blueprint $table) {
             $table->id();
+            $table->integer('account_id')->references('id')->on('accounts')->onDelete('set null');
+            $table->string('code',20);
+            $table->date('transaction_date');
+            $table->string('description',180);
+            $table->decimal('total',18,2)->default(0);
+            $table->integer('status')->default(0);
+            $table->bigInteger('created_by')->nullable()->unsigned();
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('set null');
+            $table->bigInteger('updated_by')->nullable()->unsigned();
+            $table->foreign('updated_by')->references('id')->on('users')->onDelete('set null');
             $table->timestamps();
         });
     }

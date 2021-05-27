@@ -21,9 +21,12 @@ class CreateAccountsTable extends Migration
             $table->integer('can_jurnal')->default(0);
             $table->integer('parent_account_id')->default(0);
             $table->decimal('account_balance',18,2)->default(0);
+            $table->date('balance_date')->nullable();
             $table->integer('status')->default(0);
-            $table->integer('created_by');
-            $table->integer('updated_by')->default(0);
+            $table->bigInteger('created_by')->nullable()->unsigned();
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('set null');
+            $table->bigInteger('updated_by')->nullable()->unsigned();
+            $table->foreign('updated_by')->references('id')->on('users')->onDelete('set null');
             $table->timestamps();
         });
     }

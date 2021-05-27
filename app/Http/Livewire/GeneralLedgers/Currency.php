@@ -4,9 +4,12 @@ namespace App\Http\Livewire\GeneralLedgers;
 
 use App\Models\GeneralLedgers\Currency as GeneralLedgersCurrency;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Currency extends Component
 {
+    use WithPagination;
+
     public $currency_id, $code, $name, $symbol, $rate;
     public $isModalOpen = 0;
 
@@ -79,5 +82,10 @@ class Currency extends Component
         $this->currency_id = $id;
         GeneralLedgersCurrency::find($id)->delete();
         session()->flash('message', 'Currency deleted successfully.');
+    }
+
+    public function paginationView()
+    {
+        return 'pagination';
     }
 }
