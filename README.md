@@ -52,7 +52,7 @@ Feel free to check out the [GitHub Issues for this project](https://github.com/v
 
 # Code of Conduct
 
-Dilarang menghilangkan nama asli pembuat aplikasi, dengan tujuan supaya user yang menggunakan tidak dirugikan. 
+Dilarang menghilangkan nama pembuat aplikasi, dengan tujuan supaya user yang menggunakan tidak dirugikan. 
 
 # Conntributor
 Thanks goes to all of these wonderful people (emoji key) who have helped ViMa get this far:
