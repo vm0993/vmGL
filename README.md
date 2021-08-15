@@ -40,6 +40,14 @@ Adapun Android & iOS digunakan untuk level managerial dalam hal melakukan verifi
 # Why?
 Pengalaman kerja di kontraktor yang mana rata-rata bagian keuangan itu adalah bagian paling mudah di salahkan dalam hal pencatatan, dr sini alur di ubah dan PIC terkait pengajuan lah yg harus menyelesaikan laporannya dan posting ke akunting secara otomatis setelah di buat laporan, tentunya ada filter dari pelaporan tersebut, apakah laporannya bs di terima semua atau tidak.
 
+# Tujuan
+
+Aplikasi ini di tujukan untuk membantu perusahaan supaya lebih tertib administrasi dan keuangan serta perpajakannya.<br>
+
+Sistem ini akan di sempurnakan lebih lanjut sampai integrasi dengan data di DJP (Direktorat Jenderal Pajak) untuk saat ini dikarenakan terkendala dengan aturan, jadi masih belum begitu leluasa, untuk end point API dari DJP jika mengijinkan para developer untuk bisa mengintegrasikan sistemnya akan jauh lebih efisien saat pembuatan Faktur Pajak, Bukti Potong dll. Jika menggunakan pihak ketiga bisa dan gak ada masalah.
+
+Adapun modul-modul terkait seperti Purchase, Sales, Inventory, HRM, Project Management, Job Order EMKL, Production Management, Warehouse Management, Asset Management masuk ke repository Private.
+
 # Sponsor
 Untuk mensponsori melalui :<br> 
 [Paypal page](https://paypal.me/vimasol). <br>
@@ -47,10 +55,10 @@ Jenius Cashtag : $vm0993.<br>
 Nama sponsor akan di cantumkan di website resmi dengan alamat  [Vima Solusi](https:/vimasolusi.com). untuk saat ini website blum uptime. <br>
 
 Perusahaan yang melakukan sponsorship pada pengembang akan mendapatkan fasilitas menggunakan full module yg tersedia dalam repo utama dan langsung terintegrasi dengan Mobile App nya. sponsorship ditujukan untuk pengembangan, pemeliharaan.<br><br>
-Untuk pengembang lain yang menyalin dan mengembangkan lagi serta menjual belikan ke pihak lain, saya pribadi berpesan mohon di sisihkan 2.5% dan kasih kan ke Anak Yatim Piatu.
+Untuk pengembang lain yang menyalin dan mengembangkan lagi serta menjual belikan ke pihak lain, saya pribadi berpesan mohon di sisihkan 2.5% dan kasih kan ke Anak Yatim Piatu tergantung daerahnya masing-masing.
 
 # Secure
-If you discover a security vulnerability within this app, please send an e-mail to  [secure@vimasolusi.com](mailto:secure@vimasolusi.com). All security vulnerabilities will be promptly addressed.
+Jika terdapat kendala teknik, bisa memberi tahu kami melalui email berikut  [secure@vimasolusi.com](mailto:secure@vimasolusi.com).
 
 ### Bug Reports & Feature Requests
 
@@ -60,11 +68,7 @@ Feel free to check out the [GitHub Issues for this project](https://github.com/v
 
 # Policy & Code of Conduct
 
-Dilarang menghilangkan nama pembuat aplikasi, dengan tujuan supaya user yang menggunakan tidak dirugikan. Aplikasi ini di tujukan untuk membantu perusahaan supaya lebih tertib administrasi dan keuangan serta perpajakannya. 
+Dilarang menghilangkan nama pembuat aplikasi, dengan tujuan supaya user yang menggunakan tidak dirugikan. 
 
-Sistem ini akan di sempurnakan lebih lanjut sampai integrasi dengan data di DJP (Direktorat Jenderal Pajak) untuk saat ini dikarenakan terkendala dengan aturan, jadi masih belum begitu leluasa, untuk end point API dari DJP jika mengijinkan para developer untuk bisa mengintegrasikan sistemnya akan jauh lebih efisien saat pembuatan Faktur Pajak, Bukti Potong dll. Jika menggunakan pihak ketiga bisa dan gak ada masalah.
-
-Adapun modul-modul terkait seperti Purchase, Sales, Inventory, HRM, Project Management, Job Order EMKL, Production Management, Warehouse Management, Asset Management masuk ke repository Private.
-
-# Conntributor
+# Contributor
 Thanks goes to all of these wonderful people (emoji key) who have helped ViMa get this far:
