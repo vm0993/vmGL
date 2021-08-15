@@ -39,8 +39,6 @@ Adapun Android & iOS digunakan untuk level managerial dalam hal melakukan verifi
 # Why?
 Pengalaman kerja di kontraktor yang mana rata-rata bagian keuangan itu adalah bagian paling mudah di salahkan dalam hal pencatatan, dr sini alur di ubah dan PIC terkait pengajuan lah yg harus menyelesaikan laporannya dan posting ke akunting secara otomatis setelah di buat laporan, tentunya ada filter dari pelaporan tersebut, apakah laporannya bs di terima semua atau tidak.
 
-# Policy
-
 # Sponsor
 For sponsoring this App, plese selected amount to sponsorship for Maintenance, Server Build, Internet Connection etc [Paypal page](https://paypal.me/vimasol).
 
@@ -53,7 +51,7 @@ Feel free to check out the [GitHub Issues for this project](https://github.com/v
 
 **PLEASE see the [Getting Help Guidelines]() and [Common Issues]() before opening a ticket, and be sure to complete all of the questions in the Github Issue template to help us to help you as quickly as possible.**
 
-# Code of Conduct
+# Policy & Code of Conduct
 
 Dilarang menghilangkan nama pembuat aplikasi, dengan tujuan supaya user yang menggunakan tidak dirugikan. Aplikasi ini di tujukan untuk membantu perusahaan supaya lebih tertib administrasi dan keuangan serta perpajakannya. Adapun modul-modul terkait seperti Purchase, Sales, Inventory, HRM, Project Management, Job Order EMKL, Production Management, Warehouse Management, Asset Management masuk ke repository Private.
 
