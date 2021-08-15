@@ -33,6 +33,9 @@ b. Advance Approval<br>
 c. Advance Release<br>
 d. Advance Reporting<br>
 
+Android & iOS akan tersedia di Google Play & App Store setelah proses implementasi selesai dan yang akan ada terlebih dahulu adalah versi Androidnya. untuk iOS akan menyusul.
+Adapun Android & iOS digunakan untuk level managerial dalam hal melakukan verifikasi, approval dan dashboard serta laporan-laporan penting terkait perusahaan tersebut, Serta hanya dapat di akses jika menggunakan server yang telah di sediakan.
+
 # Why?
 Pengalaman kerja di kontraktor yang mana rata-rata bagian keuangan itu adalah bagian paling mudah di salahkan dalam hal pencatatan, dr sini alur di ubah dan PIC terkait pengajuan lah yg harus menyelesaikan laporannya dan posting ke akunting secara otomatis setelah di buat laporan, tentunya ada filter dari pelaporan tersebut, apakah laporannya bs di terima semua atau tidak.
 
