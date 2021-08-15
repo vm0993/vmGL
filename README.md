@@ -41,10 +41,13 @@ Adapun Android & iOS digunakan untuk level managerial dalam hal melakukan verifi
 Pengalaman kerja di kontraktor yang mana rata-rata bagian keuangan itu adalah bagian paling mudah di salahkan dalam hal pencatatan, dr sini alur di ubah dan PIC terkait pengajuan lah yg harus menyelesaikan laporannya dan posting ke akunting secara otomatis setelah di buat laporan, tentunya ada filter dari pelaporan tersebut, apakah laporannya bs di terima semua atau tidak.
 
 # Sponsor
-Untuk mensponsori Aplikasi ini, silahkan tentukan nominal sponsor anda untuk keperluan Maintenance, Koneksi Internet, Server dll. melalui :<br> 
+Untuk mensponsori melalui :<br> 
 [Paypal page](https://paypal.me/vimasol). <br>
 Jenius Cashtag : $vm0993.<br>
-Nama sponsor akan di cantumkan di website resmi dengan alamat  [Vima Solusi](https:/vimasolusi.com). untuk saat ini website blum uptime.
+Nama sponsor akan di cantumkan di website resmi dengan alamat  [Vima Solusi](https:/vimasolusi.com). untuk saat ini website blum uptime. <br>
+
+Perusahaan yang melakukan sponsorship pada pengembang akan mendapatkan fasilitas menggunakan full module yg tersedia dalam repo utama dan langsung terintegrasi dengan Mobile App nya. sponsorship ditujukan untuk pengembangan, pemeliharaan.<br><br>
+Untuk pengembang lain yang menyalin dan mengembangkan lagi serta menjual belikan ke pihak lain, saya pribadi berpesan mohon di sisihkan 2.5% dan kasih kan ke Anak Yatim Piatu.
 
 # Secure
 If you discover a security vulnerability within this app, please send an e-mail to  [secure@vimasolusi.com](mailto:secure@vimasolusi.com). All security vulnerabilities will be promptly addressed.
