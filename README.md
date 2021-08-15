@@ -43,7 +43,7 @@ Pengalaman kerja di kontraktor yang mana rata-rata bagian keuangan itu adalah ba
 # Sponsor
 Untuk mensponsori Aplikasi ini, silahkan tentukan nominal sponsor anda untuk keperluan Maintenance, Koneksi Internet, Server dll. melalui : 
 [Paypal page](https://paypal.me/vimasol). 
-Jenius Cashtag : $vimasolusi.
+Jenius Cashtag : $vm0993.
 Nama sponsor akan di cantumkan di website resmi dengan alamat  [Vima Solusi](https:/vimasolusi.com). untuk saat ini website blum uptime.
 
 # Secure
