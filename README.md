@@ -52,7 +52,7 @@ Feel free to check out the [GitHub Issues for this project](https://github.com/v
 
 # Code of Conduct
 
-Dilarang menghilangkan nama pembuat aplikasi, dengan tujuan supaya user yang menggunakan tidak dirugikan. 
+Dilarang menghilangkan nama pembuat aplikasi, dengan tujuan supaya user yang menggunakan tidak dirugikan. Aplikasi ini di tujukan untuk membantu perusahaan supaya lebih tertib administrasi dan keuangan serta perpajakannya. Adapun modul-modul terkait seperti Purchase, Sales, Inventory, HRM, Project Management, Job Order EMKL, Production Management, Warehouse Management, Asset Management masuk ke repository Private.
 
 # Conntributor
 Thanks goes to all of these wonderful people (emoji key) who have helped ViMa get this far:
