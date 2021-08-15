@@ -1,4 +1,3 @@
-[![Docker Pulls]()](https://hub.docker.com/r/visca/vmgl/)
 
 # ViMa - Open Source General Ledger & Advance Management System 
 Accounting App Module GL &amp; Advance Management
