@@ -38,13 +38,17 @@ Pengalaman kerja di kontraktor yang mana rata-rata bagian keuangan itu adalah ba
 
 # Policy
 
-# Support
-
 # Sponsor
 For sponsoring this App, plese selected amount to sponsorship for Maintenance, Server Build, Internet Connection etc [Paypal page](https://paypal.me/vimasol).
 
 # Secure
 If you discover a security vulnerability within this app, please send an e-mail to  [secure@vimasolusi.com](mailto:secure@vimasolusi.com). All security vulnerabilities will be promptly addressed.
+
+### Bug Reports & Feature Requests
+
+Feel free to check out the [GitHub Issues for this project](https://github.com/vm0993/vmGL/issues) to open a bug report or see what open issues you can help with. Please search through existing issues (open *and* closed) to see if your question has already been answered before opening a new issue.
+
+**PLEASE see the [Getting Help Guidelines]() and [Common Issues]() before opening a ticket, and be sure to complete all of the questions in the Github Issue template to help us to help you as quickly as possible.**
 
 # Code of Conduct
 
