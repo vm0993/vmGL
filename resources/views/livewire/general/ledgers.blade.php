@@ -1,6 +1,6 @@
 <x-slot name="header">
     <h2 class="intro-y text-lg font-medium mt-10">
-        {{ trans('category.title') }} 
+        {{ trans('unit.title') }} 
     </h2>
 </x-slot>
 <div class="grid grid-cols-12 gap-6 mt-5">
@@ -8,9 +8,7 @@
         <button wire:click="create" class="btn btn-primary shadow-md mr-2">{{ trans('global.create-new') }}</button> 
         <div class="dropdown">
             <button class="dropdown-toggle btn px-2 box text-gray-700 dark:text-gray-300" aria-expanded="false">
-                <span class="w-5 h-5 flex items-center justify-center">
-                    <x-feathericon-plus class="w-4 h-4"></x-feathericon-plus>
-                </span>
+                <span class="w-5 h-5 flex items-center justify-center"> <x-feathericon-plus class="w-4 h-4"></x-feathericon-plus> </span>
             </button>
             <div class="dropdown-menu w-40">
                 @include('livewire.button-download')
@@ -26,7 +24,7 @@
         </div>
     </div>
     @if($showEditModal)
-        @include('livewire.general.category-create')
+        @include('livewire.general.ledger-create')
     @endif
     @if($confirmingDeletion)
         @include('livewire.confirm-delete')
@@ -36,32 +34,32 @@
         <table class="table table-report -mt-2">
             <thead>
                 <tr class="rounded-md bg-gray-400">
-                    <th class="px-4 py-2 w-10">{{ trans('global.code') }}</th>
+                    <th class="px-4 py-2 w-40">{{ trans('global.code') }}</th>
                     <th class="px-4 py-2">{{ trans('global.name') }}</th>
-                    <th class="px-4 py-2 w-10 text-center">{{ trans('global.status') }}</th>
-                    <th class="px-4 py-2 w-10 text-center">{{ trans('global.action') }}</th>
+                    <th class="px-4 py-2">{{ trans('ledger.address') }}</th>
+                    <th class="px-4 py-2">{{ trans('global.status') }}</th>
+                    <th class="px-4 py-2 w-60">{{ trans('global.action') }}</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($categorys as $category)
+                @foreach($ledgers as $ledger)
                 <tr class="intro-x">
-                    <td class="w-20">
-                        <a href="javascript:;" wire:click="edit({{ $category->id }})">
-                            <span class="font-medium text-theme-20 whitespace-nowrap">{{ $category->code }}</span>
-                        </a>
+                    <td class="w-30">
+                        <span class="font-medium whitespace-nowrap">{{ $ledger->code }}</span>
                     </td>
                     <td>
-                        <span class="font-medium whitespace-nowrap">{{ $category->name }}</span>
+                        <span class="font-medium whitespace-nowrap">{{ $ledger->name }}</span>
                     </td>
-                    <td class="w-10 text-center">
-                        <span class="font-medium whitespace-nowrap">{{ $category->status == 0 ? "Active" : "Suspend" }}</span>
+                    <td>
+                        <span class="font-medium whitespace-nowrap">{{ $ledger->address }}</span>
                     </td>
-                    <td class="table-report__action w-10">
+                    <td>
+                        <span class="font-medium whitespace-nowrap">{{ $ledger->status == 0 ? "Active" : "Suspend" }}</span>
+                    </td>
+                    <td class="table-report__action w-20">
                         <div class="flex justify-center items-center">
-                            <button wire:click="confirmingDeletion({{ $category->id }})" wire:loading.attr="disabled" class="flex items-center text-theme-21"> 
-                                <x-feathericon-trash-2 class="w-4 h-4 mr-1"></x-feathericon-trash-2>
-                                <span>{{ trans('global.delete-button') }} </span>
-                            </button>
+                            <button wire:click="edit({{ $ledger->id }})" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </button>
+                            <button wire:click="confirmingDeletion({{ $ledger->id }})" wire:loading.attr="disabled" class="flex items-center text-theme-21"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </button>
                         </div>
                     </td>
                 </tr>
@@ -71,7 +69,7 @@
     </div>
     <!-- BEGIN: Pagingation -->
     <div class="intro-y flex flex-wrap sm:flex-row sm:flex-nowrap items-right mt-3">
-        {{ $categorys->links('pagination',['is_livewire' => true]) }}
+        {{ $ledgers->links('pagination',['is_livewire' => true]) }}
     </div>
     <!-- END: Pagingation -->
 </div>

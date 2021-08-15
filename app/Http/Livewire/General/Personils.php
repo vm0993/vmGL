@@ -2,27 +2,27 @@
 
 namespace App\Http\Livewire\General;
 
-use App\Exports\General\CategoryExport;
+use App\Exports\General\PersonelExport;
 use App\Http\Livewire\DataTable\WithBulkActions;
 use App\Http\Livewire\DataTable\WithCachedRows;
 use App\Http\Livewire\DataTable\WithPerPagePagination;
 use App\Http\Livewire\DataTable\WithSorting;
-use App\Models\General\Category;
+use App\Models\General\Personel;
 use Livewire\Component;
-use Maatwebsite\Excel\Facades\Excel;
 use PDF;
+use Maatwebsite\Excel\Facades\Excel;
 
-class Categorys extends Component
+class Personils extends Component
 {
     use WithPerPagePagination, WithSorting, WithBulkActions, WithCachedRows;
 
-    public $code, $name, $category_id;
+    public $code, $name, $address, $phone_no, $amount, $personil_id;
     
     public $showDeleteModal = false;
     public $showEditModal = false;
     public $showFilters = false;
     public $confirmingDeletion = false;
-    public Category $editing;
+    public Personel $editing;
     protected $queryString = ['sorts'];
     public $filters = [
         'search' => '',
@@ -33,9 +33,11 @@ class Categorys extends Component
     protected $listeners = ['refreshTransactions' => '$refresh'];
 
     public function rules() { 
-        return [ 
-            'editing.code' => 'required|min:3',
+        return [
+            'editing.code' => 'required|min:2',
             'editing.name' => 'required',
+            'editing.address' => 'nullable',
+            'editing.phone_no' => 'nullable',
         ]; 
     }
 
@@ -49,29 +51,30 @@ class Categorys extends Component
         $this->showFilters = ! $this->showFilters;
     }
 
-    public function edit(Category $generalcategory)
+    public function edit(Personel $personel)
     {
         $this->useCachedRows();
 
-        if ($this->editing->isNot($generalcategory)) $this->editing = $generalcategory;
-        $this->category_id = $generalcategory->id;
+        if ($this->editing->isNot($personel)) $this->editing = $personel;
+        $this->personil_id = $personel->id;
         $this->showEditModal = true;
     }
 
     public function save()
     {
         $this->validate();
+
         try {
             $this->editing->save();
             $this->showEditModal = false;
             $this->dispatchBrowserEvent('alert',[
                 'type'=>'success',
-                'message'=>"Category Created Successfully!!"
+                'message'=>"Personil Created Successfully!!"
             ]);
         } catch (\Throwable $th) {
             $this->dispatchBrowserEvent('alert',[
                 'type'=>'error',
-                'message'=>"Something goes wrong while creating category!!"
+                'message'=>"Something goes wrong while creating personil!!"
             ]);
         }
     }
@@ -96,12 +99,12 @@ class Categorys extends Component
 
     public function makeBlankTransaction()
     {
-        return Category::make(['bank_id' => 0, 'status' => 0]);
+        return Personel::make(['amount' => 0, 'status' => 0]);
     }
 
     public function getRowsQueryProperty()
     {
-        $query = Category::query()
+        $query = Personel::query()
             ->when($this->filters['code'], fn($query, $code) => $query->where('code', 'like', '%'.$code.'%'))
             ->when($this->filters['name'], fn($query, $name) => $query->where('name', 'like', '%'.$name.'%'))
             ->when($this->filters['search'], fn($query, $search) => $query->where('name', 'like', '%'.$search.'%'));
@@ -121,7 +124,7 @@ class Categorys extends Component
         $this->useCachedRows();
 
         if ($this->editing->getKey()) $this->editing = $this->makeBlankTransaction();
-        $this->category_id = '';
+        $this->personil_id = '';
         $this->showEditModal = true;
     }
 
@@ -130,9 +133,9 @@ class Categorys extends Component
         $this->showEditModal = false;
     }
 
-    public function delete(Category $generalcategory)
+    public function delete(Personel $personel)
     {
-        $generalcategory->delete();
+        $personel->delete();
         $this->confirmingDeletion = false;
         session()->flash('message', 'Bank Deleted Successfully');
     }
@@ -144,26 +147,26 @@ class Categorys extends Component
 
     public function render()
     {
-        return view('livewire.general.categorys', [
-            'categorys' => $this->rows,
+        return view('livewire.general.personils', [
+            'personels' => $this->rows,
         ]);
     }
 
     public function downloadExcel()
     {
-        return Excel::download(new CategoryExport,'Category.xlsx');
+        return Excel::download(new PersonelExport,'Personel.xlsx');
     }
-    
+
     public function downloadPDF()
     {
-        $results = Category::all();
-        $title = 'Daftar Kategori';
+        $results = Personel::all();
+        $title = 'Daftar Pegawai';
         $params = [
             'settings' => setSetting(),
             'title'  => $title,
             'results' => $results,
         ];
-        $pdf = PDF::loadView('reports.generals.categorys.pdf', $params)->output();
+        $pdf = PDF::loadView('reports.generals.personels.pdf', $params)->output();
         return response()->streamDownload(
             fn () => print($pdf),
             $title.'.pdf'

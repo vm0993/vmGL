@@ -2,27 +2,27 @@
 
 namespace App\Http\Livewire\General;
 
-use App\Exports\General\CategoryExport;
+use App\Exports\General\SizeExport;
 use App\Http\Livewire\DataTable\WithBulkActions;
 use App\Http\Livewire\DataTable\WithCachedRows;
 use App\Http\Livewire\DataTable\WithPerPagePagination;
 use App\Http\Livewire\DataTable\WithSorting;
-use App\Models\General\Category;
+use App\Models\General\Size;
 use Livewire\Component;
 use Maatwebsite\Excel\Facades\Excel;
 use PDF;
 
-class Categorys extends Component
+class Sizes extends Component
 {
     use WithPerPagePagination, WithSorting, WithBulkActions, WithCachedRows;
 
-    public $code, $name, $category_id;
+    public $code, $name, $gravity, $size_id, $sizes;
     
     public $showDeleteModal = false;
     public $showEditModal = false;
     public $showFilters = false;
     public $confirmingDeletion = false;
-    public Category $editing;
+    public Size $editing;
     protected $queryString = ['sorts'];
     public $filters = [
         'search' => '',
@@ -33,9 +33,10 @@ class Categorys extends Component
     protected $listeners = ['refreshTransactions' => '$refresh'];
 
     public function rules() { 
-        return [ 
+        return [
             'editing.code' => 'required|min:3',
             'editing.name' => 'required',
+            'editing.gravity' => 'required',
         ]; 
     }
 
@@ -49,59 +50,16 @@ class Categorys extends Component
         $this->showFilters = ! $this->showFilters;
     }
 
-    public function edit(Category $generalcategory)
-    {
-        $this->useCachedRows();
-
-        if ($this->editing->isNot($generalcategory)) $this->editing = $generalcategory;
-        $this->category_id = $generalcategory->id;
-        $this->showEditModal = true;
-    }
-
-    public function save()
-    {
-        $this->validate();
-        try {
-            $this->editing->save();
-            $this->showEditModal = false;
-            $this->dispatchBrowserEvent('alert',[
-                'type'=>'success',
-                'message'=>"Category Created Successfully!!"
-            ]);
-        } catch (\Throwable $th) {
-            $this->dispatchBrowserEvent('alert',[
-                'type'=>'error',
-                'message'=>"Something goes wrong while creating category!!"
-            ]);
-        }
-    }
-
     public function resetFilters() { $this->reset('filters'); }
-
-    public function confirmDeletio($id)
-    {
-        $this->confirmingDeletion = $id;
-    }
-
-    public function deleteSelected()
-    {
-        $deleteCount = $this->selectedRowsQuery->count();
-
-        $this->selectedRowsQuery->delete();
-
-        $this->showDeleteModal = false;
-        $this->confirmingDeletion = false;
-        $this->notify('You\'ve deleted '.$deleteCount.' transactions');
-    }
 
     public function makeBlankTransaction()
     {
-        return Category::make(['bank_id' => 0, 'status' => 0]);
+        return Size::make(['status' => 0]);
     }
 
     public function getRowsQueryProperty()
     {
-        $query = Category::query()
+        $query = Size::query()
             ->when($this->filters['code'], fn($query, $code) => $query->where('code', 'like', '%'.$code.'%'))
             ->when($this->filters['name'], fn($query, $name) => $query->where('name', 'like', '%'.$name.'%'))
             ->when($this->filters['search'], fn($query, $search) => $query->where('name', 'like', '%'.$search.'%'));
@@ -116,12 +74,47 @@ class Categorys extends Component
         });
     }
 
+    public function render()
+    {
+        return view('livewire.general.sizes',[
+            'gSize' => $this->rows,
+        ]);
+    }
+
     public function create()
     {
         $this->useCachedRows();
 
-        if ($this->editing->getKey()) $this->editing = $this->makeBlankTransaction();
-        $this->category_id = '';
+        if($this->editing->getKey()) $this->editing = $this->makeBlankTransaction();
+        $this->size_id = '';
+        $this->showEditModal = true;
+    }
+
+    public function save()
+    {
+        $this->validate();
+
+        try {
+            $this->editing->save();
+            $this->showEditModal = false;
+            $this->dispatchBrowserEvent('alert',[
+                'type'=>'success',
+                'message'=>"Size Created Successfully!!"
+            ]);
+        } catch (\Throwable $th) {
+            $this->dispatchBrowserEvent('alert',[
+                'type'=>'error',
+                'message'=>"Something goes wrong while creating size!!"
+            ]);
+        }
+    }
+
+    public function edit(Size $size)
+    {
+        $this->useCachedRows();
+
+        if ($this->editing->isNot($size)) $this->editing = $size;
+        $this->size_id = $size->id;
         $this->showEditModal = true;
     }
 
@@ -130,40 +123,33 @@ class Categorys extends Component
         $this->showEditModal = false;
     }
 
-    public function delete(Category $generalcategory)
+    public function delete(Size $size)
     {
-        $generalcategory->delete();
+        $size->delete();
         $this->confirmingDeletion = false;
-        session()->flash('message', 'Bank Deleted Successfully');
+        session()->flash('message', 'Size Deleted Successfully');
     }
 
-    public function confirmingDeletion( $id) 
+    public function confirmingDeletion($id) 
     {
         $this->confirmingDeletion = $id;
     }
 
-    public function render()
-    {
-        return view('livewire.general.categorys', [
-            'categorys' => $this->rows,
-        ]);
-    }
-
     public function downloadExcel()
     {
-        return Excel::download(new CategoryExport,'Category.xlsx');
+        return Excel::download(new SizeExport,'Package.xlsx');
     }
-    
+
     public function downloadPDF()
     {
-        $results = Category::all();
-        $title = 'Daftar Kategori';
+        $results = Size::all();
+        $title = 'Daftar Package Size';
         $params = [
             'settings' => setSetting(),
             'title'  => $title,
             'results' => $results,
         ];
-        $pdf = PDF::loadView('reports.generals.categorys.pdf', $params)->output();
+        $pdf = PDF::loadView('reports.generals.sizes.pdf', $params)->output();
         return response()->streamDownload(
             fn () => print($pdf),
             $title.'.pdf'
