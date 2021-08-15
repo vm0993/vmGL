@@ -1,6 +1,12 @@
 # ViMa - Open Source General Ledger & Advance Management System 
 Accounting App Module GL &amp; Advance Management
 
+It is built on Laravel 8.
+
+ViMa is actively developed and we release quite frequently. (Check out the live demo here.)
+
+This is web-based software. This means there is no executable file (aka no .exe files), and it must be run on a web server and accessed through a web browser. It runs on any Mac OSX, flavor of Linux, as well as Windows, and we have a Docker image available if that's what you're into.
+
 Module yg akan tersedia dalam repo ini adalah :
 
 General Ledger<br>
