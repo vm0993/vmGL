@@ -1,3 +1,4 @@
+
 # ViMa - Open Source General Ledger & Advance Management System 
 Accounting App Module GL &amp; Advance Management
 
@@ -53,7 +54,11 @@ Feel free to check out the [GitHub Issues for this project](https://github.com/v
 
 # Policy & Code of Conduct
 
-Dilarang menghilangkan nama pembuat aplikasi, dengan tujuan supaya user yang menggunakan tidak dirugikan. Aplikasi ini di tujukan untuk membantu perusahaan supaya lebih tertib administrasi dan keuangan serta perpajakannya. Adapun modul-modul terkait seperti Purchase, Sales, Inventory, HRM, Project Management, Job Order EMKL, Production Management, Warehouse Management, Asset Management masuk ke repository Private.
+Dilarang menghilangkan nama pembuat aplikasi, dengan tujuan supaya user yang menggunakan tidak dirugikan. Aplikasi ini di tujukan untuk membantu perusahaan supaya lebih tertib administrasi dan keuangan serta perpajakannya. 
+
+Sistem ini akan di sempurnakan lebih lanjut sampai integrasi dengan data di DJP (Direktorat Jenderal Pajak) untuk saat ini dikarenakan terkendala dengan aturan, jadi masih belum begitu leluasa, untuk end point API dari DJP jika mengijinkan para developer untuk bisa mengintegrasikan sistemnya akan jauh lebih efisien saat pembuatan Faktur Pajak, Bukti Potong dll. Jika menggunakan pihak ketiga bisa dan gak ada masalah.
+
+Adapun modul-modul terkait seperti Purchase, Sales, Inventory, HRM, Project Management, Job Order EMKL, Production Management, Warehouse Management, Asset Management masuk ke repository Private.
 
 # Conntributor
 Thanks goes to all of these wonderful people (emoji key) who have helped ViMa get this far:
