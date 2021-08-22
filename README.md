@@ -8,7 +8,7 @@ ViMa is actively developed and we release quite frequently. (Check out the live 
 
 This is web-based software. This means there is no executable file (aka no .exe files), and it must be run on a web server and accessed through a web browser. It runs on any Mac OSX, flavor of Linux, as well as Windows, and we have a Docker image available if that's what you're into.
 
-!["ViMa Presentation"](http://vimasolusi.com/images/Complete_Version.png "ViMa Presentation")
+[![ViMa Presentation](http://vimasolusi.com/images/Complete_Version.png)]
 
 Module yg akan tersedia dalam repo ini adalah :
 
