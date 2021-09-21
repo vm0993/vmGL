@@ -1,6 +1,8 @@
 # NOTES
 Completed project will be upload after finish implementation & website will be can be access contain all information may be in September 21, 2021 or soon.
 
+Delay update after close out project from existing sponsor.
+ 
 License for Developer & Corporate : will be updated.
 
 # ViMa
