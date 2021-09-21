@@ -25,7 +25,7 @@ class CreateLedgersTable extends Migration
             $table->string('bank_account',20)->nullable();
             $table->decimal('begining_balance',18,2)->default(0);
             $table->decimal('running_balance',18,2)->default(0);
-            $table->integer('status')->default(0);
+            $table->enum('status',['active','suspend'])->default('active');
             $table->integer('created_by');
             $table->integer('updated_by')->default(0);
             $table->timestamps();

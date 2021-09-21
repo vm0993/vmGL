@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\GeneralLedgers\Currency;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,15 +15,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('tmp');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+/*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboard');*/
 
 /*Route::group( ['middleware' => ['auth:sanctum','verified']], function() {
     Route::group(['prefix' => '/'], function() {
         Route::resource('dashboard', DashboardController::class);  
     });
 });*/
+
+Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
+    Route::get('/dashboard', function() {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('currency', Currency::class)->name('currency'); //Tambahkan routing ini
+});
