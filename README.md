@@ -1,48 +1,47 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# NOTES
+Completed project will be upload after finish implementation & website will be can be access contain all information may be in September 21, 2021 or soon.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+License for Developer & Corporate : will be updated.
 
-## Tentang vmGL
+# ViMa
+ViMa is a suite of web based open source business apps.
 
-vmGL adalah proyek open source Sistem Informasi Akuntansi berbasis web, yang mana dalam sistem ini tersedia 2 buah module yaitu : Buku Besar & Kas Bank.
+Built on Laravel 8.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The Main ViMa Apps will be include :
+<a href="http://vimasolusi.com/page/advance-management">Advance Management</a>,
+<a href="http://vimasolusi.com/page/warehouse">Warehouse Management</a>,
+<a href="http://vimasolusi.com/page/project-management">Project Management</a>,
+<a href="http://vimasolusi.com/page/accounting">Billing &amp; Accounting</a>,
+<a href="http://vimasolusi.com/page/sales">Sales Management</a>,
+<a href="http://vimasolusi.com/page/employees">Human Resources</a>,
+<a href="http://vimasolusi.com/page/proc-management">Procurement Management</a>,
+<a href="http://vimasolusi.com/page/manufacturing">Manufacturing</a>,
+<a href="http://vimasolusi.com/page/asset-management">Asset Management</a>
 
+# Database Requirement
 
-## Instalasi vmGL
+PostgreSQL
 
+Must be add on server :<br>
+wkhtmltopdf<br>
+imagick
 
-## vmGL Sponsor
+# Development
 
-We would like to extend our thanks to the following sponsors for funding vmGL development. If you are interested in becoming a sponsor, please visit the Vima Solusi [Paypal page](https://paypal.com/???).
+For Development to client please clone with branch nama "global" ready to used & implementation. if you want to add some feature to global repo please add tag "global" in end of your new branch.
 
-### Premium Partners
+# Tujuan
 
+Aplikasi ini ditujukan supaya Indonesia mempunyai ERP yang dapat dibanggakan dan memberdayakan sumber daya dan potensi anak-anak muda Indonesia.<br>
 
+# Getting started with ViMa
+-------------------------
 
-## Kontribusi
+For a standard installation please follow the <a href="http://vimasolusi.com/documentation/2.1/administration/install.html">Setup instructions</a>
+from the documentation.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://vimasolusi.id/docs/contributions).
+To learn the software, we recommend the <a href="https://vimasolusi.com/slides">ViMa eLearning</a>, or <a href="https://vimasolusi.com/page/scale-up-business">Scale-up</a>. Developers can start with <a href="https://vimasolusi.com/documentation/2.1/developer/howtos.html">the developer tutorials</a>
 
-## Code of Conduct
+# Contributor
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://vimasolusi.id/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Vima via [vima@vimasolusi.id](mailto:vima@vimasolusi.id). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
