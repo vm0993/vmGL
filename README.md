@@ -1,12 +1,7 @@
 # NOTES
-Completed project will be upload after finish implementation & website will be can be access contain all information may be in September 21, 2021 or soon.
 
-Demo completed app can be access to : http://app.vimasolusi.com with user vima@vimasolusi.id and password => password
+Currently in the process of making Mobile App, so application updates cannot be uploaded yet.
 
-this repo will be update use SOLID pattern with Livewire for replacing jquery.
-
-Delay update after close out project from existing sponsor.
- 
 License for Developer & Corporate : will be updated.
 
 # ViMa
