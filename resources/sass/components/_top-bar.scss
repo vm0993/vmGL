@@ -1,0 +1,5 @@
+.top-bar {
+    height: 67px;
+    z-index: 51;
+    @apply flex items-center relative border-b border-theme-5;
+}

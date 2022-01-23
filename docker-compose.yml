@@ -1,0 +1,35 @@
+version: '3.3'
+networks:
+  mynetwork:
+    driver: bridge
+
+services:
+#Laravel App
+  app:
+    container_name: app
+    image: visca/app_vima
+    restart: unless-stopped
+    tty: true
+    networks:
+      - mynetwork
+    
+ #Nginx Service
+  web_server:
+    container_name: web_server
+    image: visca/nginx_vima
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8080:80"
+    depends_on:
+      - app
+    #path untuk source di dalam docker
+    networks:
+      - mynetwork
+
+  cache:
+    image: redis:alpine
+    container_name: cache
+    restart: unless-stopped
+    networks:
+      - mynetwork

@@ -1,0 +1,8 @@
+.nav.nav-tabs.boxed-tabs {
+    a {
+        @apply border-b-0;
+        &.active {
+            @apply bg-theme-1 text-white dark:bg-theme-1 dark:text-white;
+        }
+    }
+}

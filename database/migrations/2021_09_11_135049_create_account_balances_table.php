@@ -15,11 +15,13 @@ class CreateAccountBalancesTable extends Migration
     {
         Schema::create('account_balances', function (Blueprint $table) {
             $table->id();
-            $table->integer('account_id');
+            $table->unsignedBigInteger('account_id');
             $table->date('transaction_date');
             $table->decimal('debet_amount',18,2)->default(0);
             $table->decimal('credit_amount',18,2)->default(0);
             $table->timestamps();
+
+            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
         });
     }
 

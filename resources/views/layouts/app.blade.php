@@ -7,7 +7,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
 
         @livewireStyles
         
@@ -40,6 +40,6 @@
         @livewireScripts
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG7gNHAhDzgYmq4-EHvM4bqW1DNj2UCuk&libraries=places"></script>
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="{{ mix('dist/js/app.js') }}" defer></script>
     </body>
 </html>

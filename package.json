@@ -1,4 +1,8 @@
 {
+    "name": "rubick",
+    "version": "4.0.1",
+    "description": "TailwindCSS HTML Admin Template",
+    "author": "Left4code",
     "private": true,
     "scripts": {
         "dev": "npm run development",
@@ -9,18 +13,49 @@
         "prod": "npm run production",
         "production": "mix --production"
     },
-    "devDependencies": {
-        "@tailwindcss/forms": "^0.3.1",
-        "@tailwindcss/typography": "^0.4.0",
-        "alpinejs": "^2.7.3",
-        "axios": "^0.21",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
-        "postcss-import": "^14.0.1",
-        "tailwindcss": "^2.1.2"
-    },
     "dependencies": {
-        "@moesaid/cleopatra": "^1.1.1"
+        "@ckeditor/ckeditor5-build-balloon": "^29.1.0",
+        "@ckeditor/ckeditor5-build-balloon-block": "^29.1.0",
+        "@ckeditor/ckeditor5-build-classic": "^29.1.0",
+        "@ckeditor/ckeditor5-build-decoupled-document": "^29.1.0",
+        "@ckeditor/ckeditor5-build-inline": "^29.1.0",
+        "@fullcalendar/core": "^5.5.1",
+        "@fullcalendar/daygrid": "^5.5.0",
+        "@fullcalendar/interaction": "^5.5.0",
+        "@fullcalendar/list": "^5.5.0",
+        "@fullcalendar/timegrid": "^5.5.1",
+        "@left4code/tw-starter": "^1.1.0",
+        "@popperjs/core": "^2.4.4",
+        "cash-dom": "^8.0.0",
+        "chart.js": "^2.9.3",
+        "dayjs": "^1.8.33",
+        "dropzone": "^5.7.2",
+        "feather-icons": "^4.28.0",
+        "highlight.js": "^10.6.0",
+        "inputmask": "^5.0.6",
+        "js-beautify": "^1.11.0",
+        "litepicker": "^2.0.11",
+        "pristinejs": "^0.1.9",
+        "tabulator-tables": "^4.9.1",
+        "tiny-slider": "^2.9.3",
+        "tippy.js": "^6.2.7",
+        "toastify-js": "^1.9.0",
+        "tom-select": "^1.7.5",
+        "velocity-animate": "^1.5.2",
+        "xlsx": "^0.16.6",
+        "zoom-vanilla.js": "^2.0.6"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.3.1",
+        "axios": "^0.21.1",
+        "browser-sync": "^2.27.5",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "laravel-mix": "^6.0.27",
+        "lodash": "^4.17.19",
+        "postcss": "^8.3.6",
+        "resolve-url-loader": "^4.0.0",
+        "sass": "^1.37.5",
+        "sass-loader": "^12.1.0",
+        "tailwindcss": "^2.2.7"
     }
 }

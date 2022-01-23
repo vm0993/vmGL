@@ -19,12 +19,12 @@ class CreateJurnalsTable extends Migration
             $table->date('transaction_date');
             $table->string('description',180);
             $table->decimal('total',18,2)->default(0);
-            $table->enum('status',['post','suspend'])->default('post');
-            $table->bigInteger('created_by')->nullable()->unsigned();
-            $table->foreign('created_by')->references('id')->on('users')->onDelete('set null');
-            $table->bigInteger('updated_by')->nullable()->unsigned();
-            $table->foreign('updated_by')->references('id')->on('users')->onDelete('set null');
+            $table->integer('status')->default(0)->comment('0: Post, 1: Void/Suspend');
+            $table->unsignedBigInteger('created_by');
+            $table->bigInteger('updated_by')->default(0);
             $table->timestamps();
+
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
