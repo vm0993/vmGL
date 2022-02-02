@@ -1,8 +1,6 @@
 # NOTES
 
-Currently in the process of making Mobile App, so application updates cannot be uploaded yet.
-
-License for Developer & Corporate : will be updated.
+Pending Project Update.
 
 # ViMa
 ViMa is a suite of web based open source business apps.
