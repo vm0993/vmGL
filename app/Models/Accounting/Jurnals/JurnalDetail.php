@@ -24,4 +24,9 @@ class JurnalDetail extends Model
     {
         return $this->belongsTo('\App\Models\General\Ledger','ledger_id','id');
     }
+
+    public static function updateBalancePerAccount($account_id)
+    {
+        
+    }
 }

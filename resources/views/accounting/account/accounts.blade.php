@@ -39,9 +39,10 @@
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        <th class="px-4 py-2">Account No</th>
-                        <th class="px-4 py-2">Account Type</th>
-                        <th class="px-4 py-2">Sub Account</th>
+                        <th class="px-4 py-2 w-auto">Account No</th>
+                        <th class="px-4 py-2 w-24">Account Type</th>
+                        <th class="px-4 py-2 w-auto">Sub Account</th>
+                        <th class="px-4 py-2 w-16">Balance</th>
                         <th class="px-4 py-2 w-10">Created</th>
                         <th class="px-4 py-2 w-2 text-center">Action</th>
                         <th class="px-4 py-2 w-2 text-center"></th>
@@ -50,20 +51,20 @@
                 <tbody>
                     @if(empty($accounts))
                         <tr class="intro-x">
-                            <td colspan="6" class="text-center">
+                            <td colspan="7" class="text-center">
                                 <span class="font-medium whitespace-nowrap text-center">{{ __('tabel.record_not_found') }}</span>
                             </td>
                         </tr>
                     @else
                         @foreach($accounts as $result)
                         <tr class="intro-x">
-                            <td class="w-24">
+                            <td class="w-auto">
                                 <a href="{{ route('accounts.edit',['id' => $result['id']]) }}">
                                     <span class="font-medium text-theme-20 whitespace-nowrap">{{ $result['account_no'] }}</span>
                                 </a>
                                 <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">{{ $result['account_name'] }}</div>
                             </td>
-                            <td>
+                            <td class="w-24">
                                 <span class="font-medium whitespace-nowrap">
                                     @php $accTypes = getAccountTypes(); @endphp
                                     @foreach ($accTypes as $x => $typeAccount)
@@ -73,8 +74,11 @@
                                     @endforeach
                                 </span>
                             </td>
-                            <td>
+                            <td class="w-auto">
                                 <span class="font-medium whitespace-nowrap text-right">{{ $result['sub_account'] }}</span>
+                            </td>
+                            <td class="w-16 text-right">
+                                <span class="font-medium whitespace-nowrap">{{ $result['balance'] }}</span>
                             </td>
                             <td>
                                 <span class="font-medium whitespace-nowrap text-center">{{ $result['user_name'] }}</span>

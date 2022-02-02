@@ -16,6 +16,7 @@ import "./tippy";
 import "./datepicker";
 import "./tom-select";
 import "./dropzone";
+import "./ckeditor";
 import "./validation";
 import "./zoom";
 import "./notification";
@@ -42,3 +43,14 @@ import "./side-menu";
 import "./mobile-menu";
 import "./side-menu-tooltip";
 import "./dark-mode-switcher";
+import confetti from "canvas-confetti";
+import Inputmask from "inputmask";
+
+window.Pikaday = require('pikaday');
+Livewire.on('confetti', () => {
+    confetti({
+        particleCount: 80,
+        spread: 200,
+        origin: {y: 0.6}
+    });
+})

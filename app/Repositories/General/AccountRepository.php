@@ -78,6 +78,7 @@ class AccountRepository implements AppInterface
             'parent_account' => $account->parent_account_id,
             'sub_account' => $account->parent_account_id == 0 ? '' : $account->subAccount->account_no,
             'created_by' => $account->created_by,
+            'balance' => number_format($account->account_balance),
             'user_name' => $account->user->name,
             'status' => $account->status,
             'created_at' => Carbon::parse($account->created_at)->format('d M Y h:m:s A'),

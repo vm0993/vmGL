@@ -11,7 +11,15 @@ class JurnalRepository implements AppInterface
     public function getAll()
     {
         $jurnals = Jurnal::orderBy('code','desc')
-                    ->paginate(10);
+                    ->when(request()->input('description'), function ($query, $description) {
+                        return $query->where('description', 'like', $description = "%{$description}%");
+                    })
+                    ->when(request()->input('code'), function ($query, $code) {
+                        return $query->where('code', 'like' ,"%{$code}%");
+                    })
+                    ->orderBy('code','desc')
+                    ->paginate(10)
+                    ->appends(request()->query());
 
         $jurnals->getCollection()->transform(function ($items) {
             return $this->response($items);

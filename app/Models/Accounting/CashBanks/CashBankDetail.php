@@ -9,4 +9,9 @@ class CashBankDetail extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function cashBank()
+    {
+        return $this->belongsTo('\App\Models\Accounting\CashBanks\CashBank','cash_bank_id','id');
+    }
 }

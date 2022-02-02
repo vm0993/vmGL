@@ -1,11 +1,12 @@
 <!-- TOPBAR MENU -->
 <div class="top-bar">
     <!-- BEGIN: Breadcrumb -->
-    <div class="-intro-x breadcrumb mr-auto hidden sm:flex">
-        <a href="{{ route('dashboard') }}">Home</a>
-        <i data-feather="chevron-right" class="breadcrumb__icon"></i>
-        <a href="" class="breadcrumb--active">Dashboard</a>
-    </div>
+    <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+        </ol>
+    </nav>
     <!-- END: Breadcrumb -->
     <!-- BEGIN: Search -->
     <div class="intro-x relative mr-3 sm:mr-6">

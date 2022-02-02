@@ -1,7 +1,7 @@
 @extends('template.main')
 
 @section('content')
-    <h2 class="intro-y text-lg font-medium mt-4">{{ $title }}</h2>
+    <h2 class="intro-y text-lg font-medium mt-4">Data Jurnal</h2>
     <div class="grid grid-cols-12 gap-6 mt-2">
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
             <a href="{{ route('jurnals.create') }}" class="btn btn-primary shadow-md mr-2">Add New</a>
@@ -39,38 +39,34 @@
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        <th class="px-4 py-2">Account No</th>
-                        <th class="px-4 py-2">Account Type</th>
-                        <th class="px-4 py-2 w-10">Balance</th>
+                        <th class="px-4 py-2 w-auto">Jurnal No</th>
+                        <th class="px-4 py-2">Description</th>
+                        <th class="px-4 py-2 w-10">Amount</th>
                         <th class="px-4 py-2 w-10">Created</th>
                         <th class="px-4 py-2 w-2 text-center">Action</th>
-                        <th class="px-4 py-2 w-2 text-center"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @if(empty($categorys))
+                    @if(empty($jurnals))
                         <tr class="intro-x">
                             <td colspan="6" class="text-center">
-                                <span class="font-medium whitespace-nowrap text-center">{{ __('global.record_not_found') }}</span>
+                                <span class="font-medium whitespace-nowrap text-center">{{ __('tabel.record_not_found') }}</span>
                             </td>
                         </tr>
                     @else
-                        @foreach($accounts as $result)
+                        @foreach($jurnals as $result)
                         <tr class="intro-x">
-                            <td class="w-20">
-                                <a href="{{ route('accounts.edit',['account' => $result['id']]) }}">
-                                    <span class="font-medium text-theme-20 whitespace-nowrap">{{ $result['account_no'] }}</span>
+                            <td class="w-auto">
+                                <a href="{{ route('jurnals.edit',['account' => $result['id']]) }}">
+                                    <span class="font-medium text-theme-20 whitespace-nowrap">{{ $result['code'] }}</span>
                                 </a>
-                                <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">{{ $result['account_name'] }}</div>
+                                <div class="font-medium text-theme-24 whitespace-nowrap mt-0.5">{{ $result['trans_date'] }}</div>
                             </td>
                             <td>
-                                <span class="font-medium whitespace-nowrap"></span>
+                                <span class="font-medium whitespace-nowrap">{{ $result['description'] }}</span>
                             </td>
                             <td>
-                                <span class="font-medium whitespace-nowrap text-right">{{ $result['rate'] }}</span>
-                            </td>
-                            <td>
-                                <span class="font-medium whitespace-nowrap text-center">{{ $result['symbol'] }}</span>
+                                <span class="font-medium whitespace-nowrap text-center">{{ $result['total'] }}</span>
                             </td>
                             <td>
                                 <span class="font-medium whitespace-nowrap text-center">{{ $result['user_name'] }}</span>

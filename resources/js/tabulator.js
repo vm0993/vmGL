@@ -61,17 +61,17 @@ import Tabulator from "tabulator-tables";
                     formatter(cell, formatterParams) {
                         return `<div class="flex lg:justify-center">
                             <div class="intro-x w-10 h-10 image-fit">
-                                <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="/dist/images/${
+                                <img alt="Tinker Tailwind HTML Admin Template" class="rounded-full" src="/dist/images/${
                                     cell.getData().images[0]
                                 }">
                             </div>
                             <div class="intro-x w-10 h-10 image-fit -ml-5">
-                                <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="/dist/images/${
+                                <img alt="Tinker Tailwind HTML Admin Template" class="rounded-full" src="/dist/images/${
                                     cell.getData().images[1]
                                 }">
                             </div>
                             <div class="intro-x w-10 h-10 image-fit -ml-5">
-                                <img alt="Rubick Tailwind HTML Admin Template" class="rounded-full" src="/dist/images/${
+                                <img alt="Tinker Tailwind HTML Admin Template" class="rounded-full" src="/dist/images/${
                                     cell.getData().images[2]
                                 }">
                             </div>
@@ -98,8 +98,8 @@ import Tabulator from "tabulator-tables";
                     formatter(cell, formatterParams) {
                         return `<div class="flex items-center lg:justify-center ${
                             cell.getData().status
-                                ? "text-theme-9"
-                                : "text-theme-6"
+                                ? "text-theme-20"
+                                : "text-theme-21"
                         }">
                             <i data-feather="check-square" class="w-4 h-4 mr-2"></i> ${
                                 cell.getData().status ? "Active" : "Inactive"
@@ -121,7 +121,7 @@ import Tabulator from "tabulator-tables";
                             <a class="edit flex items-center mr-3" href="javascript:;">
                                 <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit
                             </a>
-                            <a class="delete flex items-center text-theme-6" href="javascript:;">
+                            <a class="delete flex items-center text-theme-21" href="javascript:;">
                                 <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete
                             </a>
                         </div>`);

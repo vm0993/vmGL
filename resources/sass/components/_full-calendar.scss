@@ -15,16 +15,8 @@
                 @include media-breakpoint-down(lg) {
                     @apply my-3;
                 }
-                .fc-button-group {
-                    @include media-breakpoint-down(sm) {
-                        @apply block;
-                    }
-                    button {
-                        @apply w-20;
-                        @include media-breakpoint-down(sm) {
-                            @apply w-full rounded-md mb-2;
-                        }
-                    }
+                .fc-button-group button {
+                    @apply w-20;
                 }
             }
         }
@@ -54,16 +46,13 @@
         @apply rounded-md;
         tr th {
             @apply px-5 py-3;
-            @include media-breakpoint-down(sm) {
-                @apply px-0;
-            }
         }
     }
     .fc-daygrid-event-harness {
         @apply mx-5;
     }
     .fc-h-event {
-        @apply bg-theme-1 border-theme-1 rounded-md;
+        @apply bg-theme-25 border-theme-25 rounded-md;
     }
     .fc-event-title-container {
         @apply py-1 px-2 text-xs;
@@ -72,7 +61,7 @@
         @apply text-xs;
     }
     .fc-daygrid-event-dot {
-        @apply border-theme-1 mr-2;
+        @apply border-theme-25 mr-2;
     }
     .fc-daygrid-dot-event .fc-event-title {
         @apply font-medium;
@@ -80,26 +69,8 @@
     .fc-col-header-cell-cushion {
         @apply font-medium;
     }
-    &.fc .fc-view-harness {
-        @include media-breakpoint-down(sm) {
-            min-height: 400px !important;
-        }
-    }
-    &.fc .fc-daygrid-day-frame {
-        @include media-breakpoint-down(sm) {
-            min-height: 60px;
-        }
-    }
     .fc-daygrid-more-link {
         @apply text-sm;
-        @include media-breakpoint-down(md) {
-            font-size: 10px;
-            @apply text-gray-600;
-        }
-        @include media-breakpoint-down(sm) {
-            line-height: 10px;
-            @apply pl-0 block -mt-3;
-        }
     }
     .fc-daygrid-day-bottom {
         @apply pt-1;
@@ -129,8 +100,8 @@
     .fc-button-primary:not(:disabled):active,
     .fc-button-primary:not(:disabled).fc-button-active {
         color: #ffffff !important;
-        border-color: rgba(28, 63, 170, var(--tw-bg-opacity)) !important;
-        background-color: rgba(28, 63, 170, var(--tw-bg-opacity)) !important;
+        border-color: rgba(47, 90, 216, var(--tw-bg-opacity)) !important;
+        background-color: rgba(47, 90, 216, var(--tw-bg-opacity)) !important;
     }
     .fc-list-day-cushion {
         --tw-bg-opacity: 1;
@@ -148,7 +119,7 @@
         border-color: rgba(28, 63, 170, var(--tw-border-opacity)) !important;
     }
     .fc-v-event {
-        @apply border-theme-1 bg-theme-1 dark:shadow-none dark:border-dark-1 dark:bg-dark-1;
+        @apply border-theme-25 bg-theme-25 dark:shadow-none dark:border-dark-1 dark:bg-dark-1;
     }
     .fc-event-time {
         font-size: 0.75rem !important;
@@ -168,7 +139,7 @@
         }
         .fc-button-primary:not(:disabled):active,
         .fc-button-primary:not(:disabled).fc-button-active {
-            border-color: rgba(28, 63, 170, var(--tw-bg-opacity)) !important;
+            border-color: rgba(47, 90, 216, var(--tw-bg-opacity)) !important;
             background-color: rgba(
                 28,
                 63,

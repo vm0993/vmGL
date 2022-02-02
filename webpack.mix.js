@@ -1,5 +1,10 @@
 const mix = require("laravel-mix");
 const tailwindcss = require("tailwindcss");
+const { styles } = require("@ckeditor/ckeditor5-dev-utils");
+const CKERegex = {
+    svg: /ckeditor5-[^/\\]+[/\\]theme[/\\]icons[/\\][^/\\]+\.svg$/,
+    css: /ckeditor5-[^/\\]+[/\\]theme[/\\].+\.css/,
+};
 
 /*
  |--------------------------------------------------------------------------
@@ -12,13 +17,25 @@ const tailwindcss = require("tailwindcss");
  |
  */
 
-mix.js("resources/js/app.js", "public/dist/js")
-    .js("resources/js/ckeditor-classic.js", "public/dist/js")
-    .js("resources/js/ckeditor-inline.js", "public/dist/js")
-    .js("resources/js/ckeditor-balloon.js", "public/dist/js")
-    .js("resources/js/ckeditor-balloon-block.js", "public/dist/js")
-    .js("resources/js/ckeditor-document.js", "public/dist/js")
-    .sass("resources/sass/app.scss", "public/dist/css")
+Mix.listen("configReady", (webpackConfig) => {
+    const rules = webpackConfig.module.rules;
+    const targetSVG = /(\.(png|jpe?g|gif|webp)$|^((?!font).)*\.svg$)/;
+    const targetFont = /(\.(woff2?|ttf|eot|otf)$|font.*\.svg$)/;
+    const targetCSS = /\.p?css$/;
+
+    for (let rule of rules) {
+        if (rule.test.toString() === targetSVG.toString()) {
+            rule.exclude = CKERegex.svg;
+        } else if (rule.test.toString() === targetFont.toString()) {
+            rule.exclude = CKERegex.svg;
+        } else if (rule.test.toString() === targetCSS.toString()) {
+            rule.exclude = CKERegex.css;
+        }
+    }
+});
+
+mix.js("resources/js/app.js", "dist/js")
+    .sass("resources/sass/app.scss", "dist/css")
     .options({
         processCssUrls: false,
         postCss: [tailwindcss("./tailwind.config.js")],
@@ -26,10 +43,45 @@ mix.js("resources/js/app.js", "public/dist/js")
     .autoload({
         "cash-dom": ["cash"],
     })
-    .copyDirectory("resources/json", "public/dist/json")
-    .copyDirectory("resources/fonts", "public/dist/fonts")
-    .copyDirectory("resources/images", "public/dist/images")
+    .webpackConfig({
+        module: {
+            rules: [
+                {
+                    test: CKERegex.svg,
+                    use: ["raw-loader"],
+                },
+                {
+                    test: CKERegex.css,
+                    use: [
+                        {
+                            loader: "style-loader",
+                            options: {
+                                injectType: "singletonStyleTag",
+                                attributes: {
+                                    "data-cke": true,
+                                },
+                            },
+                        },
+                        "css-loader",
+                        {
+                            loader: "postcss-loader",
+                            options: {
+                                postcssOptions: styles.getPostCssConfig({
+                                    themeImporter: {
+                                        themePath: require.resolve(
+                                            "@ckeditor/ckeditor5-theme-lark"
+                                        ),
+                                    },
+                                    minify: true,
+                                }),
+                            },
+                        },
+                    ],
+                },
+            ],
+        },
+    })
     .browserSync({
-        proxy: "rubick-laravel.test",
+        proxy: "vmgl.test",
         files: ["resources/**/*.*"],
     });

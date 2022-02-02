@@ -52,7 +52,7 @@
                 @apply bg-theme-6 text-white;
             }
             &.active {
-                @apply bg-theme-1 text-white;
+                @apply bg-theme-25 text-white;
             }
             &:hover:not(.active) {
                 @apply bg-gray-300 text-gray-800;
@@ -68,62 +68,6 @@
             @apply px-3 bg-gray-100 border-gray-300;
             .dropdown-header-close {
                 @apply cursor-pointer opacity-100 text-gray-500 mr-0.5;
-            }
-        }
-    }
-}
-
-.dark {
-    .tom-select {
-        .ts-input {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgb(255 255 255)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-            @apply bg-dark-2 border-transparent text-white;
-            &.dropdown-active {
-                @apply bg-dark-2 border-transparent text-white;
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.828' height='8.414' viewBox='0 0 14.828 8.414'%3E%3Cpath id='chevron' d='M6,9l6,6,6-6' transform='translate(19.414 16) rotate(180)' fill='none' stroke='rgb(255 255 255)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E%0A") !important;
-                &:before {
-                    @apply bg-dark-2;
-                }
-            }
-        }
-        &.multi .ts-input {
-            & > div {
-                @apply bg-dark-1 border border-dark-4 text-white;
-                &.active {
-                    @apply bg-dark-3;
-                }
-                .remove {
-                    @apply border-dark-4;
-                }
-            }
-        }
-        &.plugin-dropdown_input .ts-input.focus {
-            @apply border-transparent;
-        }
-        .ts-dropdown {
-            @apply bg-dark-2 border-dark-4 text-white;
-            &.plugin-dropdown_input .dropdown-input-wrap input {
-                @apply bg-dark-1 border-dark-4;
-            }
-            .optgroup-header {
-                @apply bg-dark-2 text-gray-500;
-            }
-            .create {
-                @apply bg-dark-2 text-white;
-                &:hover {
-                    @apply bg-dark-1;
-                }
-            }
-            .option {
-                &:hover:not(.active) {
-                    @apply bg-dark-1 text-white;
-                }
-            }
-            .dropdown-header {
-                @apply bg-dark-2 border-dark-4 text-white;
-                .dropdown-header-close {
-                    @apply text-white;
-                }
             }
         }
     }
