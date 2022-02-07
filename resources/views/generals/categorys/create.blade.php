@@ -5,10 +5,10 @@
         <h2 class="text-lg font-medium mr-auto">{{ empty($result) ? $title : $title }}</h2>
     </div>
     <div class="grid grid-cols-12 gap-6 mt-2">
-        <div class="intro-y col-span-12 lg:col-span-6">
+        <div class="intro-y col-span-6 lg:col-span-6">
             <!-- BEGIN: Form Layout -->
             @if(!empty($result))
-            <form action="{{ route('masters.categories.update',['id'=> $result['id']]) }}" method="post">
+            <form action="{{ route('categories.update',['category'=> $result['id']]) }}" method="post">
             @else
             <form action="{{ url()->current() }}" method="post">
             @endif
@@ -30,7 +30,7 @@
                             placeholder="Category Name">
                     </div>
                     <div class="text-right mt-5">
-                        <a href="{{ route('masters.categories') }}" class="btn closeModal btn-outline-secondary w-20 mr-1">Cancel</a>
+                        <a href="{{ route('categories.index') }}" class="btn closeModal btn-outline-secondary w-20 mr-1">Cancel</a>
                         <button type="submit" class="btn btn-primary w-auto">Save</button>
                     </div>
                 </div>

@@ -25,9 +25,9 @@ class LedgerController extends Controller
         $ledgers = $this->ledgerRepository->getAll();
 
         if (!$ledgers->isEmpty()){
-            return view('generals.ledgers.ledger',compact('ledgers'));
+            return view('generals.ledgers.index',compact('ledgers'));
         }
-        return view('generals.ledgers.ledger');
+        return view('generals.ledgers.index');
     }
 
     public function create()

@@ -5,7 +5,7 @@
         <h2 class="text-lg font-medium mr-auto">{{ empty($result) ? $title : $title }}</h2>
     </div>
     <div class="grid grid-cols-12 gap-10 mt-2">
-        <div class="intro-y col-span-12 lg:col-span-6 md:col-span-6 sm:col-span-8">
+        <div class="intro-y col-span-12 lg:col-span-8 md:col-span-8 sm:col-span-8">
             @if(!empty($result))
             <form action="{{ route('accounts.update',['id'=> $result['id']]) }}" method="post" onkeydown="return event.key != 'Enter';">
             @else
@@ -25,7 +25,7 @@
                                 <div>
                                     <div class="md:grid grid-cols-2 sm:grid grid-cols-2 gap-2">
                                         <div class="input-group">
-                                            <div for="account_type" class="input-group-text"><strong>Account Type</strong></div>
+                                            <div for="account_type" class="input-group-text"><strong>Account&nbsp;Type</strong></div>
                                             @php $accTypes = getAccountTypes(); @endphp
                                             <select 
                                                 class="tom-select w-full" 
@@ -53,22 +53,24 @@
                                 </div>
                                 <div class="mt-3">
                                     <div class="md:grid grid-cols-2 sm:grid grid-cols-2 gap-2">
-                                        <div class="md:grid grid-cols-2 sm:grid grid-cols-2 gap-2">
-                                            <div class="input-group">
-                                                <div class="input-group-text">Account No</div>
-                                                <input 
-                                                    type="text" 
-                                                    id="account_no"
-                                                    name="account_no"
-                                                    @if(!empty($result))
-                                                    value="{{ $result['account_no'] }}"
-                                                    @endif
-                                                    class="form-control" 
-                                                    placeholder="Account No">
-                                            </div>
+                                        <div class="input-group">
+                                            <div class="input-group-text">Account&nbsp;No</div>
+                                            <input 
+                                                type="text" 
+                                                id="account_no"
+                                                name="account_no"
+                                                @if(!empty($result))
+                                                value="{{ $result['account_no'] }}"
+                                                @endif
+                                                class="form-control" 
+                                                placeholder="Account No">
                                         </div>
-                                        <div class="input-group ml-2">
-                                            <div for="account_name" class="input-group-text">Account Name</div>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="md:grid grid-cols-1 sm:grid grid-cols-1 gap-2">
+                                        <div class="input-group">
+                                            <div for="account_name" class="input-group-text">Account&nbsp;Name</div>
                                             <input 
                                                 type="text" 
                                                 id="account_name"
@@ -110,7 +112,7 @@
                                             </div>
                                         </div>
                                         <div class="input-group ml-2" id="subAccount">
-                                            <div class="input-group-text">Sub Account</div>
+                                            <div class="input-group-text">Sub&nbsp;Account</div>
                                             <select 
                                                 class="tom-select w-full" 
                                                 name="parent_account_id" 
@@ -136,9 +138,15 @@
 <script type="text/javascript">
     $('#subAccount').hide();
     var accountType = '';
-    var isCanJurnal = '';
+    var isCanJurnal = $('#can_jurnal').val();
     var parentId = "{{ request()->segment(count(request()->segments())) }}";
     var op = '';
+
+    if(isCanJurnal == 'YES'){
+        $('#subAccount').show();
+    }else{
+        $('#subAccount').hide();
+    }
 
     $('#account_type').on('change',function(){
         accountType = $('#account_type').val();
@@ -157,34 +165,41 @@
     $('#can_jurnal').on('change',function(){
         isCanJurnal = $('#can_jurnal').val();
         accountType = $('#account_type').val();
-        if(isCanJurnal === 'YES'){
-            $('#subAccount').show();
-            //show detail account
-            $.ajax({
-                url:'http://vmgl.test/masters/accounts/'+ accountType +'/lists',
-                dataType:'json',
-                type:'get',
-                processData : false,
-                contentType:false,
-                success:function(data){
-                    //op +='<option value="0">Select Sub Account </option>';
-                    for(var i=0;i<data.length;i++){
-                        if(parentId != "create"){
-                            //op +='<option value="'+data[i].id+'" selected>'+data[i].account_no+ ' - ' +data[i].account_name+'</option>';
-                            //$('#parent_account_id').append('<option value="'+data[i].id+'" selected>'+data[i].account_no+ ' - ' +data[i].account_name+'</option>');
-                            $('#parent_account_id').append($('<option>').val(data[i].id).text(data[i].account_no+ ' - ' +data[i].account_name));
-                        }else{
-                            //op +='<option value="'+data[i].id+'">'+data[i].account_no+ ' - ' +data[i].account_name+'</option>';
-                            //$('#parent_account_id').append('<option value="'+data[i].id+'">'+data[i].account_no+ ' - ' +data[i].account_name+'</option>');
-                            $('#parent_account_id').append($('<option>').val(data[i].id).text(data[i].account_no+ ' - ' +data[i].account_name));
-                        }
-                    }
-                    //$('#parent_account_id').html("");
-                    //$('#parent_account_id').append(op);
-                }
-            });
+        console.log(accountType);
+        if(accountType == '' && isCanJurnal === 'YES'){
+            alert('Please Select Account Type first!');
         }else{
-            $('#subAccount').hide();
+            if(isCanJurnal === 'YES'){
+                $('#subAccount').show();
+                //show detail account
+                $.ajax({
+                    url:'http://vmgl.test/masters/accounts/'+ accountType +'/lists',
+                    dataType:'json',
+                    type:'get',
+                    processData : false,
+                    contentType:false,
+                    success:function(data){
+                        op +='<option value="0">Select Sub Account </option>';
+                        for(var i=0;i<data.length;i++){
+                            if(parentId != "create"){
+                                op +='<option value="'+data[i].id+'" selected>'+data[i].account_no+ ' - ' +data[i].account_name+'</option>';
+                                //$('#parent_account_id').append('<option value="'+data[i].id+'" selected>'+data[i].account_no+ ' - ' +data[i].account_name+'</option>');
+                                //$('#parent_account_id').append($('<option>').val(data[i].id).text(data[i].account_no+ ' - ' +data[i].account_name));
+                            }else{
+                                op +='<option value="'+data[i].id+'">'+data[i].account_no+ ' - ' +data[i].account_name+'</option>';
+                                //$('#parent_account_id').append('<option value="'+data[i].id+'">'+data[i].account_no+ ' - ' +data[i].account_name+'</option>');
+                                ///$('#parent_account_id').append($('<option>').val(data[i].id).text(data[i].account_no+ ' - ' +data[i].account_name));
+                            }
+                            //$('#parent_account_id').append(op);
+                            console.log(op);
+                        }
+                        $('#parent_account_id').html("");
+                        $('#parent_account_id').append(op);
+                    }
+                });
+            }else{
+                $('#subAccount').hide();
+            }
         }
     });
 </script>

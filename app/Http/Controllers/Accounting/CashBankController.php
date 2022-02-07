@@ -23,10 +23,10 @@ class CashBankController extends Controller
         $cashBanks = $this->cashBankRepository->getAll();
 
         if (!$cashBanks->isEmpty()){
-            return view('accounting.cash-bank.cash-banks',compact('cashBanks'));
+            return view('accounting.cash-bank.index',compact('cashBanks'));
         }
 
-        return view('accounting.cash-bank.cash-banks');
+        return view('accounting.cash-bank.index');
     }
 
     public function create()

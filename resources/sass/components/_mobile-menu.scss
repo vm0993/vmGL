@@ -1,51 +1,95 @@
-.mobile-menu {
-    @apply border-b border-theme-29 -mt-5 -mx-8 mb-6;
-    @include media-breakpoint-down(sm) {
-        @apply -mx-3;
-    }
-    .mobile-menu-bar {
-        height: 70px;
-        @apply px-8 flex items-center;
-        @include media-breakpoint-down(sm) {
-            @apply px-3;
-        }
-    }
-    ul {
-        &.menu__sub-open {
-            @apply block;
-        }
-        li {
-            max-width: 1280px;
-            @apply w-full mx-auto;
-            ul {
-                @apply hidden bg-theme-23 rounded-md mx-6 my-1 dark:bg-dark-4;
-                @include media-breakpoint-down(sm) {
-                    @apply mx-3;
-                }
-                .menu {
-                    @apply px-4;
-                }
+@layer components {
+    .mobile-menu {
+        @apply border-b bg-theme-10 border-theme-31 dark:bg-dark-1 dark:border-dark-3 mb-6;
+        &.mobile-menu--light {
+            @apply bg-theme-1 border-theme-3 dark:bg-dark-2 dark:border-dark-3;
+            .mobile-menu-bar a svg {
+                @apply text-theme-7 dark:text-white;
+            }
+            .menu {
+                @apply text-theme-7 dark:text-white;
+            }
+            .mobile-menu-box {
+                @apply border-theme-3;
+            }
+            .menu__devider {
+                @apply bg-theme-3;
+            }
+            ul ul {
+                @apply bg-theme-6 bg-opacity-100;
                 ul {
-                    @apply hidden bg-theme-24 rounded-md mx-0 dark:bg-dark-7;
+                    @apply bg-theme-8 bg-opacity-100;
                 }
             }
         }
-    }
-    .menu__devider {
-        @apply w-full h-px bg-theme-29 relative dark:bg-dark-3;
-    }
-    .menu {
-        height: 50px;
-        @apply flex items-center text-white px-10;
-        @include media-breakpoint-down(sm) {
-            @apply px-5;
+        &.mobile-menu--dashboard:not(.mobile-menu--light) {
+            @apply bg-theme-5 border-theme-11 dark:bg-dark-1 dark:border-dark-3;
+            .mobile-menu-bar a svg {
+                @apply text-white dark:text-white;
+            }
+            .menu {
+                @apply text-white dark:text-white;
+            }
+            .mobile-menu-box {
+                @apply border-theme-11 dark:border-dark-3;
+            }
+            .menu__devider {
+                @apply bg-theme-11 dark:bg-dark-3;
+            }
+            ul ul {
+                @apply bg-theme-36 bg-opacity-100 dark:bg-dark-4 dark:bg-opacity-100;
+                ul {
+                    @apply bg-theme-37 bg-opacity-100 dark:bg-dark-7 dark:bg-opacity-100;
+                }
+            }
         }
-        .menu__title {
-            @apply w-full ml-3 flex items-center;
-            .menu__sub-icon {
-                @apply transition ease-in duration-100 ml-auto;
-                svg {
-                    @apply w-5 h-5;
+        @include media-breakpoint-down(md) {
+            @apply mb-0;
+        }
+        .mobile-menu-bar {
+            height: 70px;
+            @apply px-4 flex items-center;
+        }
+        .mobile-menu-box {
+            @apply border-t border-theme-31 dark:border-dark-3;
+        }
+        ul {
+            &.menu__sub-open {
+                @apply block;
+            }
+            li {
+                max-width: 1280px;
+                @apply w-full mx-auto;
+                ul {
+                    @apply hidden bg-theme-23 bg-opacity-50 rounded-md mx-6 my-1 dark:bg-dark-4 dark:bg-opacity-100;
+                    @include media-breakpoint-down(sm) {
+                        @apply mx-3;
+                    }
+                    .menu {
+                        @apply px-4;
+                    }
+                    ul {
+                        @apply hidden bg-opacity-70 rounded-md mx-0 dark:bg-dark-7 dark:bg-opacity-100;
+                    }
+                }
+            }
+        }
+        .menu__devider {
+            @apply w-full h-px bg-theme-31 relative dark:bg-dark-3;
+        }
+        .menu {
+            height: 50px;
+            @apply flex items-center text-gray-600 dark:text-white px-10;
+            @include media-breakpoint-down(sm) {
+                @apply px-5;
+            }
+            .menu__title {
+                @apply w-full ml-3 flex items-center;
+                .menu__sub-icon {
+                    @apply transition ease-in duration-100 ml-auto;
+                    svg {
+                        @apply w-5 h-5;
+                    }
                 }
             }
         }

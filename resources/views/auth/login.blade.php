@@ -5,7 +5,7 @@
         <a href="" class="-intro-x flex items-center pt-5">
             <img alt="Vima" class="w-6" src="{{ asset('images/favico.ico') }}">
             <span class="text-white text-lg ml-3">
-            Vi<span class="font-medium">ma</span>
+            VI<span class="font-medium">MA</span>
             </span>
         </a>
         <div class="my-auto">

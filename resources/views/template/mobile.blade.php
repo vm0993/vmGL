@@ -94,7 +94,7 @@
             </a>
             <ul class="">
                 <li>
-                    <a href="{{ route('accounting.jurnals') }}" class="menu">
+                    <a href="{{ route('jurnals.index') }}" class="menu">
                         <div class="menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -104,7 +104,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('accounting.cash-banks') }}" class="menu">
+                    <a href="{{ route('cash-banks.index') }}" class="menu">
                         <div class="menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -114,7 +114,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('accounting.history-jurnals') }}" class="menu">
+                    <a href="{{ route('history-jurnals.index') }}" class="menu">
                         <div class="menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -137,7 +137,7 @@
             </a>
             <ul class="">
                 <li>
-                    <a href="{{ route('advance-management.advance-requests') }}" class="menu">
+                    <a href="{{ route('advance-requests.index') }}" class="menu">
                         <div class="menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -147,7 +147,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('advance-management.advance-approvals') }}" class="menu">
+                    <a href="{{ route('advance-approvals.index') }}" class="menu">
                         <div class="menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -157,7 +157,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('advance-management.advance-releases') }}" class="menu">
+                    <a href="{{ route('advance-releases.index') }}" class="menu">
                         <div class="menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -167,7 +167,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('advance-management.advance-reports') }}" class="menu">
+                    <a href="{{ route('advance-reports.index') }}" class="menu">
                         <div class="menu__icon">
                             <i data-feather="activity"></i>
                         </div>

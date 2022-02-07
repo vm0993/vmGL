@@ -3,7 +3,7 @@
     <a href="" class="intro-x flex items-center pl-5 pt-4">
         <img alt="Vima" class="w-6" src="{{ asset('images/favico.ico') }}">
         <span class="hidden xl:block text-white text-lg ml-3">
-        Vi<span class="font-medium">ma</span>
+        VI<span class="font-medium">MA</span>
         </span>
     </a>
     <div class="side-nav__devider my-6"></div>
@@ -15,6 +15,7 @@
                 </div>
                 <div class="side-menu__title">
                     Dashboard
+                    <div class="side-menu__sub-icon transform rotate-180"> </div>
                 </div>
             </a>
         </li>
@@ -98,7 +99,7 @@
             </a>
             <ul class="">
                 <li>
-                    <a href="{{ route('accounting.jurnals') }}" class="side-menu">
+                    <a href="{{ route('jurnals.index') }}" class="side-menu">
                         <div class="side-menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -108,7 +109,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('accounting.cash-banks') }}" class="side-menu">
+                    <a href="{{ route('cash-banks.index') }}" class="side-menu">
                         <div class="side-menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -118,7 +119,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('accounting.history-jurnals') }}" class="side-menu">
+                    <a href="{{ route('history-jurnals.index') }}" class="side-menu">
                         <div class="side-menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -143,7 +144,7 @@
             </a>
             <ul class="">
                 <li>
-                    <a href="{{ route('advance-management.advance-requests') }}" class="side-menu">
+                    <a href="{{ route('advance-requests.index') }}" class="side-menu">
                         <div class="side-menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -153,7 +154,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('advance-management.advance-approvals') }}" class="side-menu">
+                    <a href="{{ route('advance-approvals.index') }}" class="side-menu">
                         <div class="side-menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -163,7 +164,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('advance-management.advance-releases') }}" class="side-menu">
+                    <a href="{{ route('advance-releases.index') }}" class="side-menu">
                         <div class="side-menu__icon">
                             <i data-feather="activity"></i>
                         </div>
@@ -173,7 +174,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('advance-management.advance-reports') }}" class="side-menu">
+                    <a href="{{ route('advance-reports.index') }}" class="side-menu">
                         <div class="side-menu__icon">
                             <i data-feather="activity"></i>
                         </div>

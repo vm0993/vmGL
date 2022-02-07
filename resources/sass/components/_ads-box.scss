@@ -1,3 +1,5 @@
-.ads-box__title {
-    line-height: 2.15rem;
+@layer components {
+    .ads-box__title {
+        line-height: 2.15rem;
+    }
 }

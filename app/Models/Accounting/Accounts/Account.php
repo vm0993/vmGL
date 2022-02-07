@@ -90,6 +90,19 @@ class Account extends Model
         return Account::where('account_type',$value)->get();
     }
 
+    public static function getListAccountJurnal()
+    {
+        $accounts = Account::select(DB::raw('id,account_no,account_name'))
+                    ->where([
+                        ['can_jurnal','YES'],
+                        ['status','ACTIVE']
+                    ])
+                    ->orderBy('id','asc')
+                    ->get();
+
+        return $accounts;
+    }
+
     public static function getAccountNo($account_type)
     {
         $lastAccount = Account::select(DB::raw('max(RIGHT(account_no, 3)) as result'))

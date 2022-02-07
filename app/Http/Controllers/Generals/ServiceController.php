@@ -24,9 +24,9 @@ class ServiceController extends Controller
         $services = $this->serviceRepository->getAll();
 
         if (!$services->isEmpty()){
-            return view('generals.services.service',compact('services'));
+            return view('generals.services.index',compact('services'));
         }
-        return view('generals.services.service');
+        return view('generals.services.index');
     }
 
     public function create()

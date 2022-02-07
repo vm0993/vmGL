@@ -1,8 +1,10 @@
-.inbox-filter .inbox-filter__dropdown-menu {
-    width: 250px;
-}
+@layer components {
+    .inbox-filter .inbox-filter__dropdown-menu {
+        width: 250px;
+    }
 
-.inbox-filter__dropdown-menu .dropdown-menu__content {
-    margin-left: -228px;
-    @apply w-auto;
+    .inbox-filter__dropdown-menu .dropdown-menu__content {
+        margin-left: -228px;
+        @apply w-auto;
+    }
 }

@@ -34,8 +34,8 @@ Mix.listen("configReady", (webpackConfig) => {
     }
 });
 
-mix.js("resources/js/app.js", "dist/js")
-    .sass("resources/sass/app.scss", "dist/css")
+mix.js("resources/js/app.js", "public/dist/js")
+    .sass("resources/sass/app.scss", "public/dist/css")
     .options({
         processCssUrls: false,
         postCss: [tailwindcss("./tailwind.config.js")],
@@ -81,7 +81,10 @@ mix.js("resources/js/app.js", "dist/js")
             ],
         },
     })
+    .copyDirectory("resources/json", "public/dist/json")
+    .copyDirectory("resources/fonts", "public/dist/fonts")
+    .copyDirectory("resources/images", "public/dist/images")
     .browserSync({
-        proxy: "vmgl.test",
+        proxy: "vima.test",
         files: ["resources/**/*.*"],
     });

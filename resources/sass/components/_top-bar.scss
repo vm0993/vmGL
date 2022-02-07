@@ -1,5 +1,10 @@
-.top-bar {
-    height: 67px;
-    z-index: 51;
-    @apply flex items-center relative border-b border-theme-5;
+@layer components {
+    .top-bar {
+        height: 67px;
+        z-index: 51;
+        @apply flex items-center relative border-b border-theme-31;
+    }
+    .content--dashboard .top-bar {
+        @apply border-theme-11 dark:border-dark-3;
+    }
 }

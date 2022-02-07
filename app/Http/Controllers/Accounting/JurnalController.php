@@ -24,10 +24,10 @@ class JurnalController extends Controller
         $jurnals = $this->jurnalRepository->getAll();
 
         if (!$jurnals->isEmpty()){
-            return view('accounting.jurnal.jurnals',compact('jurnals'));
+            return view('accounting.jurnal.index',compact('jurnals'));
         }
 
-        return view('accounting.jurnal.jurnals');
+        return view('accounting.jurnal.index');
     }
 
     public function getJurnalNo($transaction_date)
@@ -39,7 +39,8 @@ class JurnalController extends Controller
     {
         $result = '';
         $title = 'Jurnal Baru';
-        return view('accounting.jurnal.create',compact('result','title'));
+        $accounts = getListAccount();
+        return view('accounting.jurnal.create',compact('result','title','accounts'));
     }
 
     public function store(JurnalRequest $request)

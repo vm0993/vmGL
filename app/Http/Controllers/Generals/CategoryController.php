@@ -24,10 +24,10 @@ class CategoryController extends Controller
         $categorys = $this->categoryRepository->getAll();
 
         if (!$categorys->isEmpty()){
-            return view('generals.categorys.category',compact('categorys'));
+            return view('generals.categorys.index',compact('categorys'));
         }
 
-        return view('generals.categorys.category');
+        return view('generals.categorys.index');
     }
 
     public function create()

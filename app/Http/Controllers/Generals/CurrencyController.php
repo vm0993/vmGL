@@ -24,7 +24,7 @@ class CurrencyController extends Controller
         $currencys = $this->currenciesRepository->getAll();
 
         if (!$currencys->isEmpty()){
-            return view('accounting.currency.currencys',compact('currencys'));
+            return view('accounting.currency.index',compact('currencys'));
         }
         return $this->responseDataNotFound('Data yang diminta tidak tersedia');
     }

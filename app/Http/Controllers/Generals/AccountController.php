@@ -29,10 +29,10 @@ class AccountController extends Controller
         $accounts = $this->accountRepository->getAll();
         $title = 'Data Account';
         if (!$accounts->isEmpty()){
-            return view('accounting.account.accounts',compact('accounts','title'));
+            return view('accounting.account.index',compact('accounts','title'));
         }
 
-        return view('accounting.account.accounts',compact('accounts','title'));
+        return view('accounting.account.index',compact('accounts','title'));
     }
 
     public function create()

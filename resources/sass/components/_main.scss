@@ -1,5 +1,6 @@
-.main {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    @apply py-5;
+@layer components {
+    .main {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 }

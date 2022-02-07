@@ -84,12 +84,6 @@ module.exports = {
                 1.5: 1.5,
                 2.5: 2.5,
             },
-            transformOrigin: {
-                "0": "0%",
-            },
-            zIndex: {
-                "-1": "-1",
-            },
         },
     },
     variants: {
@@ -114,8 +108,6 @@ module.exports = {
                 "responsive",
                 "hover",
                 "dark",
-                "focus", 
-                "focus-within",
             ],
             textColor: ["last", "first", "odd", "responsive", "hover", "dark"],
             boxShadow: ["last", "first", "odd", "responsive", "hover", "dark"],

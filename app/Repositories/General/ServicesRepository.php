@@ -12,7 +12,7 @@ class ServicesRepository implements AppInterface
     {
         $services = CostCharge::with(['category','WipAccount','CogsAccount','ExpenseAccount'])
                     ->orderBy('code','asc')
-                    ->pagiante(10);
+                    ->paginate(10);
 
         $services->getCollection()->transform(function ($items) {
             return $this->response($items);

@@ -14,7 +14,4 @@ interface AppInterface
     
     public function delete($id);
 
-    public function getNextNumber($value);
-
-    public function getById($value);
 }

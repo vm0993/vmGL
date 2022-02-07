@@ -1,5 +1,7 @@
-.wizard {
-    .wizard__line {
-        height: 3px;
+@layer components {
+    .wizard {
+        .wizard__line {
+            height: 3px;
+        }
     }
 }

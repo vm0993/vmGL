@@ -1,3 +1,5 @@
-.error-page img {
-    width: 450px;
+@layer components {
+    .error-page img {
+        width: 450px;
+    }
 }

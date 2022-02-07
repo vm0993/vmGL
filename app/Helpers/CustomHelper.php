@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Accounting\Accounts\Account;
+
 function getAccountTypes()
 {
     $jenisAkun = array(
@@ -62,6 +64,13 @@ function getParentAccounts()
 function getSubAccount($account_id)
 {
     
+}
+
+function getListAccount()
+{
+    $accounts = Account::getListAccountJurnal();
+
+    return $accounts;
 }
 
 function getBulanRomawi()

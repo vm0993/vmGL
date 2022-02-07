@@ -1,5 +1,7 @@
-.pricing-tabs {
-    a.active {
-        @apply bg-theme-1 text-white;
+@layer components {
+    .pricing-tabs {
+        a.active {
+            @apply bg-theme-25 text-white;
+        }
     }
 }
