@@ -82,43 +82,6 @@
                             </div>
                             <div id="jurnal-list">
                             </div>
-                            {{--  <div class="grid grid-cols-12 gap-x-5 mt-0">
-                                <div class="col-span-12 lg:col-span-6 sm:col-span-3 mt-2">
-                                    <div class="input-group">
-                                        <div class="input-group-text">
-                                            {{ __('jurnal.account') }}
-                                        </div>
-                                        <input type="number" step="any" class="form-control text-right" />
-                                    </div>
-                                </div>
-                                <div class="col-span-12 lg:col-span-3 sm:col-span-3 mt-2">
-                                    <div class="input-group">
-                                        <div class="input-group-text">
-                                            {{ __('jurnal.debet') }}
-                                        </div>
-                                        <input type="number" step="any" class="form-control text-right" />
-                                    </div>
-                                </div>
-                                <div class="col-span-12 lg:col-span-3 sm:col-span-3 mt-2">
-                                    <div class="input-group">
-                                        <div class="input-group-text">
-                                            {{ __('jurnal.credit') }}
-                                        </div>
-                                        <input type="number" step="any" class="form-control text-right"/>
-                                    </div>
-                                </div>
-                                <div class="col-span-12 lg:col-span-12 sm:col-span-12 mt-2">
-                                    <div class="input-group">
-                                        <div class="input-group-text">
-                                            {{ __('jurnal.memo') }}
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="{{ trans('jurnal.memo') }}"  />
-                                        <div class="input-group-text">
-                                            <x-feathericon-trash-2 class="w-4 h-4"></x-feathericon-trash-2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>  --}}
                             <div class="grid grid-cols-12 gap-x-5 mt-0">
                                 <div class="col-span-12 lg:col-span-6 sm:col-span-3 mt-2">
                                     <div class="col-span-12 lg:col-span-8 mt-2">
@@ -156,6 +119,7 @@
 @stop
 
 @push('scripts')
+<script src="{{ asset('js/select2.min.js') }}"></script>
 <script type="text/javascript">
     var transDate = '';
     var url = "{{ route('jurnals.index') }}";
@@ -268,7 +232,7 @@
         html += '            <div class="input-group-text">';
         html += '                {{ __('jurnal.account') }}';
         html += '            </div>';
-        html += '            <select class="tom-select w-full" id="account_id_'+ number +'" name="account_id_'+ number +'">';
+        html += '            <select class="form-control select" id="account_id_'+ number +'" name="account_id_'+ number +'">';
         html += '               <option value="0">Pilih Akun Transaksi</option>';
         html += '               @foreach($accounts as $item) <option value="{{ $item->id }}">{{ $item->account_no }} - {{ $item->account_name }} @endforeach ';
         html += '            </select>';
@@ -296,14 +260,15 @@
         html += '                {{ __('jurnal.memo') }}';
         html += '            </div>';
         html += '            <input type="text" name="memo_'+ number +'" id="memo_'+ number +'" class="form-control" placeholder="{{ trans('jurnal.memo') }}"  />';
-        html += '            <div class="input-group-text remove">';
+        html += '            <button type="button" class="input-group-text remove">';
         html += '                <x-feathericon-trash-2 class="w-4 h-4"></x-feathericon-trash-2>';
-        html += '            </div>';
+        html += '            </button>';
         html += '        </div>';
         html += '    </div>';
         html += '</div>';
 
         $("#jurnal-list").append(html);
+        $('.select').select2();
     }
 
     $('#addLine').on('click',function(){

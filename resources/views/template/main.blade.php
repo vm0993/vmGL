@@ -10,6 +10,7 @@
         <title>{{ config('app.name', 'vmGL') }}</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body class="{{ \Route::current()->getName()=='dashboard' ? 'main' : 'py-5' }}">

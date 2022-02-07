@@ -7,7 +7,7 @@
     <div class="grid grid-cols-12 gap-10 mt-2">
         <div class="intro-y col-span-12 lg:col-span-8 md:col-span-8 sm:col-span-8">
             @if(!empty($result))
-            <form action="{{ route('accounts.update',['id'=> $result['id']]) }}" method="post" onkeydown="return event.key != 'Enter';">
+            <form action="{{ route('accounts.update',['account'=> $result['id']]) }}" method="post" onkeydown="return event.key != 'Enter';">
             @else
             <form action="{{ url()->current() }}" method="post" onkeydown="return event.key != 'Enter';">
             @endif
