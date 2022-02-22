@@ -5,6 +5,8 @@ Current project not use Multi Tenancy and Multi Database, Multi Tenancy and Mult
 
 ![alt text](https://github.com/vm0993/vmGL/blob/main/vmfoss.jpg?raw=true)
 
+![alt text](https://github.com/vm0993/vmGL/blob/main/jurnal.jpg?raw=true)
+
 
 # ViMa
 ViMa is a suite of web based open source business apps.
