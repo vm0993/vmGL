@@ -15,13 +15,16 @@ class CreateJurnalDetailsTable extends Migration
     {
         Schema::create('jurnal_details', function (Blueprint $table) {
             $table->id();
-            $table->integer('jurnal_id')->references('id')->on('jurnals')->onDelete('set null');;
-            $table->integer('account_id')->references('id')->on('accounts')->onDelete('set null');;
+            $table->unsignedBigInteger('jurnal_id');
+            $table->unsignedBigInteger('account_id');
             $table->integer('ledger_id')->default(0);
             $table->decimal('debet',18,2)->default(0);
             $table->decimal('credit',18,2)->default(0);
             $table->string('memo',110)->nullable();
             $table->timestamps();
+
+            $table->foreign('jurnal_id')->references('id')->on('jurnals')->onDelete('cascade');
+            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
         });
     }
 

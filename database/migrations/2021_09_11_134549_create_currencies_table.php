@@ -19,10 +19,11 @@ class CreateCurrenciesTable extends Migration
             $table->string('name',30);
             $table->decimal('rate',18,2)->default(0);
             $table->string('symbol',4)->nullable();
-            $table->enum('status',['active','suspend'])->default('active');
-            $table->integer('created_by');
+            $table->integer('status')->default(0)->comment('0: Active, 1: Suspend');
+            $table->unsignedBigInteger('created_by');
             $table->integer('updated_by')->default(0);
             $table->timestamps();
+
         });
     }
 

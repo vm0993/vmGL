@@ -7,13 +7,21 @@
     "require": {
         "php": "^7.3|^8.0",
         "fideloper/proxy": "^4.4",
+        "barryvdh/laravel-snappy": "^0.4.8",
+        "brunocfalcao/blade-feather-icons": "^2.0",
+        "doctrine/dbal": "^3.1",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/jetstream": "^2.3",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.0"
+        "maatwebsite/excel": "^3.1",
+        "predis/predis": "^1.1",
+        "ramsey/uuid": "^4.2",
+        "simplesoftwareio/simple-qrcode": "^4.2",
+        "spatie/laravel-backup": "^6.11",
+        "spatie/laravel-permission": "^5.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

@@ -9,12 +9,38 @@ use Illuminate\Support\Facades\Auth;
 class Currency extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    //protected $connection = 'tenant';
+    protected $guarded = array();
 
-    const STATUSES = [
-        'active' => "{{ __('global.active') }}",
-        'suspend' => "{{ __('global.non_active') }}",
-    ];
+    public function user()
+    {
+        return $this->belongsTo('\App\Models\User','created_by','id');
+    }
+
+    public function getCodeAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    public function getNameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    public function getCodeFullAttribute()
+    {
+        return ucfirst($this->code) . " : " . ucfirst($this->name);
+    }
+
+    public function setCodeAttribute($value)
+    {
+        $this->attributes['code'] = ucfirst($value);
+    }
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = ucfirst($value);
+    }
 
     protected static function boot()
     {

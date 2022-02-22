@@ -1,0 +1,153 @@
+/*
+ |--------------------------------------------------------------------------
+ | TailwindCSS Directives
+ |--------------------------------------------------------------------------
+ |
+ | Import TailwindCSS directives and swipe out at build-time with all of
+ | the styles it generates based on your configured design system.
+ |
+ | Please check this link for more details:
+ | https://tailwindcss.com/docs/installation#include-tailwind-in-your-css
+ |
+ */
+@import "tailwind";
+
+/*
+  |--------------------------------------------------------------------------
+  | Fonts
+  |--------------------------------------------------------------------------
+  |
+  | Import all fonts used in the template, the font configuration can be
+  | seen in "tailwind.config.js".
+  |
+  | Please check this link for more details:
+  | https://tailwindcss.com/docs/theme
+  |
+  */
+@import "fonts/roboto";
+
+/*
+  |--------------------------------------------------------------------------
+  | Breakpoints
+  |--------------------------------------------------------------------------
+  |
+  | Provide custom breakpoints for responsive layouts.
+  |
+  | Default values:
+  | xs: 0, sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px
+  |
+  */
+@import "~@left4code/tw-starter/dist/scss/breakpoint";
+
+/*
+  |--------------------------------------------------------------------------
+  | Mixins
+  |--------------------------------------------------------------------------
+  |
+  | Import helper mixins.
+  |
+  */
+@import "~@left4code/tw-starter/dist/scss/mixins/media";
+
+/*
+  |--------------------------------------------------------------------------
+  | 3rd Party Libraries
+  |--------------------------------------------------------------------------
+  |
+  | Import 3rd party library CSS/SASS files.
+  |
+  */
+@import "~@left4code/tw-starter/dist/scss/accordion";
+@import "~@left4code/tw-starter/dist/scss/alert";
+@import "~@left4code/tw-starter/dist/scss/btn";
+@import "~@left4code/tw-starter/dist/scss/dropdown";
+@import "~@left4code/tw-starter/dist/scss/file";
+@import "~@left4code/tw-starter/dist/scss/form-check";
+@import "~@left4code/tw-starter/dist/scss/form-control";
+@import "~@left4code/tw-starter/dist/scss/form-help";
+@import "~@left4code/tw-starter/dist/scss/form-inline";
+@import "~@left4code/tw-starter/dist/scss/form-label";
+@import "~@left4code/tw-starter/dist/scss/form-select";
+@import "~@left4code/tw-starter/dist/scss/image-fit";
+@import "~@left4code/tw-starter/dist/scss/input-group";
+@import "~@left4code/tw-starter/dist/scss/intro";
+@import "~@left4code/tw-starter/dist/scss/modal";
+@import "~@left4code/tw-starter/dist/scss/pagination";
+@import "~@left4code/tw-starter/dist/scss/progress";
+@import "~@left4code/tw-starter/dist/scss/scrollbar";
+@import "~@left4code/tw-starter/dist/scss/tab";
+@import "~@left4code/tw-starter/dist/scss/table";
+@import "~@left4code/tw-starter/dist/scss/typing-dots";
+@import "~@left4code/tw-starter/dist/scss/zoom-in";
+@import "~@left4code/tw-starter/dist/scss/box";
+@import "~highlight.js/scss/github";
+@import "~tippy.js/dist/tippy";
+@import "~tippy.js/themes/light";
+@import "~tippy.js/dist/svg-arrow";
+@import "~tippy.js/animations/shift-away";
+@import "~toastify-js/src/toastify";
+@import "~dropzone/dist/dropzone";
+@import "~zoom-vanilla.js/dist/zoom";
+@import "~tabulator-tables/dist/css/tabulator";
+@import "~tom-select/src/scss/tom-select";
+
+/*
+  |--------------------------------------------------------------------------
+  | Components
+  |--------------------------------------------------------------------------
+  |
+  | Import CSS/SCSS components.
+  |
+  */
+@import "components/global";
+@import "components/main";
+@import "components/top-bar";
+@import "components/login";
+@import "components/table-report";
+@import "components/report-timeline";
+@import "components/report-chart";
+@import "components/search";
+@import "components/notification";
+@import "components/report-box";
+@import "components/report-box-2";
+@import "components/report-box-3";
+@import "components/report-box-4";
+@import "components/content";
+@import "components/top-nav";
+@import "components/side-nav";
+@import "components/breadcrumb";
+@import "components/toastify";
+@import "components/toastify-content";
+@import "components/feather-icon";
+@import "components/top-bar-boxed";
+@import "components/mobile-menu";
+@import "components/inbox-filter";
+@import "components/inbox";
+@import "components/chat";
+@import "components/boxed-tabs";
+@import "components/chat-dropdown";
+@import "components/wizard";
+@import "components/blog";
+@import "components/news";
+@import "components/pricing-tabs";
+@import "components/error-page";
+@import "components/search-result";
+@import "components/notification-content";
+@import "components/report-maps";
+@import "components/pos-dropdown";
+@import "components/pos";
+@import "components/post";
+@import "components/litepicker";
+@import "components/tiny-slider";
+@import "components/tippy";
+@import "components/tabulator";
+@import "components/tom-select";
+@import "components/dropzone";
+@import "components/ckeditor";
+@import "components/zoom-vanilla";
+@import "components/dark-mode-switcher";
+@import "components/hljs";
+@import "components/source-preview";
+@import "components/ads-box";
+@import "components/full-calendar";
+@import "components/pristine";

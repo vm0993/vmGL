@@ -1,0 +1,12 @@
+.content {
+    border-radius: 30px;
+    padding: 0px 22px;
+    @apply min-w-0 min-h-screen bg-theme-2 flex-1 pb-10 dark:bg-dark-1;
+    @include media-breakpoint-down(md) {
+        @apply px-4 max-w-full;
+    }
+    &:before {
+        content: "";
+        @apply w-full h-px block;
+    }
+}

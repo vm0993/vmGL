@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class AccountBalance extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    //protected $connection = 'tenant';
+    protected $guarded = array();
 }
