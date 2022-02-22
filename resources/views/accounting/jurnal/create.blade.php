@@ -151,6 +151,16 @@
         var count = 1;
         var addState = "{{ request()->segment(count(request()->segments())) }}";
         
+        var momentFormat = 'DD-MM-YYYY';
+        var element = document.querySelectorAll('.date');
+        element.forEach(element => {
+            var m = new IMask(element, {
+                mask: Date,
+                pattern: 'd`-m`-00000',
+                lazy: false,
+            });
+        });
+        
         function getNextJurnal()
         {
             transDate = $('#transaction_date').val();

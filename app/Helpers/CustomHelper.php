@@ -215,39 +215,6 @@ function getCashBankAccount()
     return $accounts;
 }
 
-function getActiveJob()
-{
-    $jobs = JobOrder::select(DB::raw('job_orders.id,job_orders.code,ledgers.name'))
-            ->join('ledgers','ledgers.id','=','job_orders.ledger_id')
-            ->where('job_orders.status','ACTIVE')
-            ->get();
-
-    return $jobs;
-}
-
-function getJobByCustomer($customer_id)
-{
-    $jobs = JobOrder::select(DB::raw('id,code'))
-            ->where('ledger_id',$customer_id)
-            ->get();
-
-    return $jobs;
-}
-
-function getBillOutstandingByLedgerId($supplier_id)
-{
-    $bills = Bill::select(DB::raw('bills.id,bills.code,bills.transaction_date,bills.ledger_id,ledgers.name,bills.total_bill,bills.balance'))
-                ->join('ledgers','ledgers.id','=','bills.ledger_id')
-                ->where([
-                    ['bills.ledger_id',$supplier_id],
-                    ['bills.status','ACTIVE'],
-                    ['bills.balance','>',0]
-                ])
-                ->get();
-
-    return $bills;
-}
-
 function getActiveLedger($type)
 {
     $customers = Ledger::where([

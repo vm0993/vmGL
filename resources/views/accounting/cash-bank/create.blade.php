@@ -178,10 +178,22 @@
         var creAccount = "{{ __('cashbank.credit_account') }}";
         var checkValue =  $('#cashbank_tipe').is(":checked");
     
+        $('.select').select2();
+
         $('#cashbank_tipe').on('click',function(){
             getNextJurnal();
         });
     
+        var momentFormat = 'DD-MM-YYYY';
+        var element = document.querySelectorAll('.date');
+        element.forEach(element => {
+            var m = new IMask(element, {
+                mask: Date,
+                pattern: 'd`-m`-00000',
+                lazy: false,
+            });
+        });
+
         function getNextJurnal()
         {
             transDate = $('#transaction_date').val();
