@@ -9,7 +9,7 @@
             </span>
         </a>
         <div class="my-auto">
-            <img alt="Vima" class="-intro-x w-1/2 -mt-16" src="{{ asset('mix/images/illustration.svg') }}">
+            <img alt="Vima" class="-intro-x w-1/2 -mt-16" src="{{ mix('dist/images/illustration.svg') }}">
             <div class="-intro-x text-white font-medium text-4xl leading-tight mt-10">A few more clicks to <br> sign in to your account.</div>
             <div class="-intro-x mt-5 text-lg text-white text-opacity-70 dark:text-gray-500">Manage all your all transaction accounts in one place</div>
         </div>
