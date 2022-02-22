@@ -41,6 +41,14 @@ For Development to client please clone with branch nama "global" ready to used &
 
 Aplikasi ini ditujukan supaya Indonesia mempunyai ERP yang dapat dibanggakan dan memberdayakan sumber daya dan potensi anak-anak muda Indonesia.<br>
 
+# Installation
+
+1. Clone this Project git clone "this repo"
+2. composer install
+3. php artisan key:generate
+4. php artisan db:seed
+
+
 # Getting started with ViMa
 -------------------------
 
