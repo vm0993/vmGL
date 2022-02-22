@@ -1,6 +1,6 @@
 <!-- SIDEBAR MENU -->
 <nav class="side-nav">
-    <a href="" class="intro-x flex items-center pl-5 pt-4">
+    <a href="{{ route('dashboard') }}" class="intro-x flex items-center pl-5 pt-4">
         <img alt="Vima" class="w-6" src="{{ asset('images/favico.ico') }}">
         <span class="hidden xl:block text-white text-lg ml-3">
         VI<span class="font-medium">MA</span>
@@ -39,7 +39,7 @@
                             <i data-feather="activity"></i>
                         </div>
                         <div class="side-menu__title">
-                            Departemen
+                            Department
                         </div>
                     </a>
                 </li>
@@ -49,7 +49,7 @@
                             <i data-feather="activity"></i>
                         </div>
                         <div class="side-menu__title">
-                            Satuan
+                            Unit
                         </div>
                     </a>
                 </li>
@@ -119,7 +119,7 @@
                             <i data-feather="activity"></i>
                         </div>
                         <div class="side-menu__title">
-                            Pajak
+                            Tax
                         </div>
                     </a>
                 </li>
@@ -131,7 +131,7 @@
                     <i data-feather="users"></i>
                 </div>
                 <div class="side-menu__title">
-                    Operasional
+                    Advance Request
                     <div class="side-menu__sub-icon ">
                         <i data-feather="chevron-down"></i>
                     </div>
@@ -144,7 +144,7 @@
                             <i data-feather="activity"></i>
                         </div>
                         <div class="side-menu__title">
-                            Kasbon DO
+                            Request
                         </div>
                     </a>
                 </li>
@@ -164,7 +164,7 @@
                             <i data-feather="activity"></i>
                         </div>
                         <div class="side-menu__title">
-                            Pencairan
+                            Release
                         </div>
                     </a>
                 </li>
@@ -174,7 +174,7 @@
                             <i data-feather="activity"></i>
                         </div>
                         <div class="side-menu__title">
-                            Pelaporan
+                            Reporting
                         </div>
                     </a>
                 </li>
@@ -186,7 +186,7 @@
                     <i data-feather="book"></i>
                 </div>
                 <div class="side-menu__title">
-                    Keuangan
+                    Accounting
                     <div class="side-menu__sub-icon ">
                     <i data-feather="chevron-down"></i>
                     </div>
@@ -199,7 +199,7 @@
                             <i data-feather="activity"></i>
                         </div>
                         <div class="side-menu__title">
-                            Jurnal
+                            Journal
                         </div>
                     </a>
                 </li>
@@ -219,7 +219,7 @@
                             <i data-feather="activity"></i>
                         </div>
                         <div class="side-menu__title">
-                            History
+                            Jurnal History
                         </div>
                     </a>
                 </li>
@@ -229,7 +229,7 @@
                             <i data-feather="activity"></i>
                         </div>
                         <div class="side-menu__title">
-                            Mutasi Kas/Bank
+                            Cash Bank History
                         </div>
                     </a>
                 </li>

@@ -1,0 +1,35 @@
+<?php
+
+//get bank lable
+
+return [
+    'code' => 'Code',
+    'name' => 'Name',
+    'rate' => 'Rate',
+    'code-flag' => 'Symbol',
+    'currency' => 'Mata&nbsp;Uang',
+    'no-result' => 'Tidak ada data!',
+    'title' => 'Currency List',
+    'add-title' => 'Add Currency',
+    'edit-title' => 'Edit Currency',
+    'input.code' => 'Input Code',
+    'input.name' => 'Input Name',
+    'set-default' => 'Set Default',
+    'change-default' => 'Change',
+    'default' => 'Default',
+    'add-default' => 'Add Default Currency',
+    'edit-default' => 'Edit Default Currency',
+    'receivable_id' => 'Account Receivable',
+    'payable_id' => 'Account Payable',
+    'dp_purchase_id' => 'Down Payment Purchase',
+    'dp_sales_id' => 'Down Payment Sales',
+    'realize_id' => 'Realize Profit/Loss',
+    'unrealize_id' => 'Unrealize Profit/Loss',
+    'select_curr_ar' => 'Select Receivable Account',
+    'select_curr_ap' => 'Select Payable Account',
+    'select_curr_realize' => 'Select Realize Account',
+    'select_curr_unrealize' => 'Select Unrealize Account',
+    'select_curr_purchase' => 'Select Down Payment Purchase Account',
+    'select_curr_sale' => 'Select Down Payment Sale Account',
+    'select_currency' => 'Select&nbsp;Currency',
+]; 

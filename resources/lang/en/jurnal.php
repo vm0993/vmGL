@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'title' => 'Journal List',
+    //Table
+    'transaction' => 'New Voucher',
+    'module_id' => 'Module ID',
+    'code' => 'Code',
+    'transaction_date' => 'Transaction Date',
+    'date' => 'Date',
+    'description' => 'Description',
+    'total' => 'Total',
+    'status' => 'Status',
+    'status' => 'Status',
+    'account' => 'Account',
+    'account_name' => 'Account Name',
+    'debet' => 'Debet',
+    'credit' => 'Credit',
+    'memo' => 'Memo',
+    'cost_id' => 'Cost Center',
+    'add-account' => '+ Add Line',
+    'select_account' => 'Select Account',
+    'start_date' => 'Start Date',
+    'end_date' => 'End Date',
+    'detail-transaction' => 'Detail Transaction',
+    'input.code' => 'Input Code',
+    'input.description' => 'Input Description',
+    'total_credit' => 'Total&nbsp;Credit',
+    'total_debet' => 'Total&nbsp;Debet',
+];

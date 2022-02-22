@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'title' => 'Request List',
+    'project_id' => 'Project',
+    'select_project' => 'Select Project',
+    'code' => 'Request No',
+    'transaction_date' => 'Transaction Date',
+    'date' => 'Date',
+    'start_date' => 'Start Date',
+    'end_date' => 'End Date',
+    'description' => 'Description',
+    'request_amount' => 'Request Amount',
+    'approve_amount' => 'Approve Amount',
+    'amount' => 'Amount',
+    'select_client' => 'Select Client',
+    'add-title' => 'New Request',
+    'edit-title' => 'Edit Request',
+    'input.code' => 'Input Code',
+    'input.project_id' => 'Input Project Code',
+    'input.description' => 'Input Description',
+    'input.amount' => 'Input Amount',
+    'release_no' => 'Release No',
+    'total_request' => 'Total Request',
+];

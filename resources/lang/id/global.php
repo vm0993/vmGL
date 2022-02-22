@@ -1,0 +1,35 @@
+<?php
+
+return [
+    '404' => 'Data Tidak Ada',
+    'action' => 'Aksi',
+    'create-new' => 'Buat Data Baru',
+    'save-button' => 'Simpan',
+    'cancel-button' => 'Batal',
+    'delete-button' => 'Hapus',
+    'edit-button' => 'Ubah',
+    'approve-button' => 'Setujui',
+    'rate' => 'Kurs',
+    //standard global mapping
+    'code' => 'Kode',
+    'name' => 'Nama',
+    'status' => 'Status',
+
+    'select_bank' => 'Pilih Bank',
+    'search' => 'Cari...',
+    'advance_search' => 'Pencarian Lanjutan...',
+    'hide' => 'Sembunyikan ',
+    'show' => 'Tampilkan',
+    'to' => 'ke',
+    'results' => 'hasil',
+    'of' => 'dari',
+    'dark_mode' => 'Mode Gelap',
+    'light_mode' => 'Mode Terang',
+    'transaction' => 'transaksi',
+    'print' => 'Cetak',
+    'excel-export' => 'Export ke Excel',
+    'pdf-export' => 'Export ke PDF',
+    'bulk-delete' => 'Hapus',
+    'select_type' => 'Pilih Jenis',
+    'company_type' => 'Jenis Perusahaan',
+];

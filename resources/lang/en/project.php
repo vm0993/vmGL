@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'title' => 'Project List',
+    'ledger_id' => 'Ledger',
+    'contract_no' => 'Contract No',
+    'contract_title' => 'Contract Title',
+    'contract_amount' => 'Contract Amount',
+    'contract_balance' => 'Contract Balance',
+    'select_client' => 'Select Client',
+    'add-title' => 'New Project',
+    'edit-title' => 'Edit Project',
+    'add-order' => 'Add Project Order',
+    'project' => 'Project',
+    'input.name' => 'Input Project Name',
+    'input.code' => 'Input Project Code',
+    'input.ledger' => 'Select Ledger',
+    'input.contract' => 'Input Contract No',
+    'search' => 'Search',
+    'order_no' => 'Order No',
+    'order_date' => 'Order Date',
+    'order_description' => 'Order Description',
+    'order_amount' => 'Order Amount',
+    'remaining' => 'Contract Remaining',
+    'project_attachment' => 'Project Attachment',
+    'no-result' => 'No Record Found!',
+];

@@ -1,0 +1,33 @@
+<?php
+
+return [
+    'title' => 'Order Receive List',
+    'transaction' => 'New Transaction',
+    'code' => 'Code',
+    'transaction_date' => 'Transaction Date',
+    'date' => 'Date',
+    'description' => 'Description',
+    'order_amount' => 'Receive Qty',
+    'amount_approve' => 'Receive Order',
+    'notes' => 'Note',
+    'amount' => 'Amount',
+    'request_id' => 'Request',
+    'add-item' => 'Add Item',
+    'start_date' => 'Start Date',
+    'end_date' => 'End Date',
+    //Table
+    'new' => 'New Bank',
+    'add-title' => 'Approve Request',
+    'edit-title' => 'Edit Approve Request',
+    'approve-title' => 'Approve Amount',
+    'service_name' => 'Service Name',
+    'file_location' => 'File Location',
+    'select_request' => 'Select Request',
+    'select_tax' => 'Select Tax',
+    'select_item' => 'Select Item',
+    'item_name' => 'Item Name',
+    'qty' => 'Qty',
+    'price' => 'Price',
+    'tax_id' => 'Tax Code',
+    'add-action' => 'Action',
+];

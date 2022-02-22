@@ -1,7 +1,6 @@
 @extends('template.main')
 
 @section('content')
-    dd(request()->getHost());
     <div class="col-span-12 xxl:col-span-9 xl:col-span-8 md:col-span-9">
         <center>
             <button id="btn-nft-enable" onclick="initFirebaseMessagingRegistration()" class="btn btn-danger btn-xs btn-flat">Allow for Notification</button>

@@ -1,10 +1,8 @@
 <?php
 
-namespace Database\Seeders\Custom;
+namespace Database\Seeders\General;
 
 use Illuminate\Database\Seeder;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
 
 class RoleDefaultSeeder extends Seeder
 {
