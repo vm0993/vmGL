@@ -15,15 +15,15 @@ Built on Laravel 8.
 
 The Main ViMa Apps will be include :<br>
 <a href="http://vimasolusi.com/page/advance-management">Advance Management (FOSS)</a>,<br>
-<a href="http://vimasolusi.com/page/warehouse">Warehouse Management</a>,<br>
-<a href="http://vimasolusi.com/page/project-management">Project Management</a>,<br>
+<a href="http://vimasolusi.com/page/warehouse">Warehouse Management (Sponsorship)</a>,<br>
+<a href="http://vimasolusi.com/page/project-management">Project Management (Sponsorship)</a>,<br>
 <a href="http://vimasolusi.com/page/finance-cashbank">Finance &amp; Accounting (FOSS)</a>,<br>
-<a href="http://vimasolusi.com/page/accounting">Billing &amp; Management</a>,<br>
-<a href="http://vimasolusi.com/page/sales">Sales Management</a>,<br>
-<a href="http://vimasolusi.com/page/employees">Human Resources</a>,<br>
-<a href="http://vimasolusi.com/page/proc-management">Procurement Management</a>,<br>
-<a href="http://vimasolusi.com/page/manufacturing">Manufacturing</a>,<br>
-<a href="http://vimasolusi.com/page/asset-management">Asset Management</a><br>
+<a href="http://vimasolusi.com/page/accounting">Billing &amp; Management (Sponsorship)</a>,<br>
+<a href="http://vimasolusi.com/page/sales">Sales Management (Sponsorship)</a>,<br>
+<a href="http://vimasolusi.com/page/employees">Human Resources (Sponsorship)</a>,<br>
+<a href="http://vimasolusi.com/page/proc-management">Procurement Management (Sponsorship)</a>,<br>
+<a href="http://vimasolusi.com/page/manufacturing">Manufacturing (Sponsorship)</a>,<br>
+<a href="http://vimasolusi.com/page/asset-management">Asset Management (Sponsorship)</a><br>
 
 # Database Requirement
 
