@@ -21,7 +21,7 @@ The Main ViMa Apps will be include :
 
 # Database Requirement
 
-PostgreSQL
+MySQL
 
 Must be add on server :<br>
 wkhtmltopdf<br>
