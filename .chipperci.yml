@@ -17,7 +17,7 @@ pipeline:
 
   - name: Compile Dev Assets
     cmd: |
-      npm ci --no-audit
+      npm install --no-audit
       npm run dev
 
   - name: Test
