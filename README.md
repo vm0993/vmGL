@@ -8,10 +8,11 @@ ViMa is a suite of web based open source business apps.
 Built on Laravel 8.
 
 The Main ViMa Apps will be include :
-<a href="http://vimasolusi.com/page/advance-management">Advance Management</a>,
+<a href="http://vimasolusi.com/page/advance-management">Advance Management (FOSS)</a>,
 <a href="http://vimasolusi.com/page/warehouse">Warehouse Management</a>,
 <a href="http://vimasolusi.com/page/project-management">Project Management</a>,
-<a href="http://vimasolusi.com/page/accounting">Billing &amp; Accounting</a>,
+<a href="http://vimasolusi.com/page/finance-cashbank">Finance &amp; Accounting (FOSS)</a>,
+<a href="http://vimasolusi.com/page/accounting">Billing &amp; Management</a>,
 <a href="http://vimasolusi.com/page/sales">Sales Management</a>,
 <a href="http://vimasolusi.com/page/employees">Human Resources</a>,
 <a href="http://vimasolusi.com/page/proc-management">Procurement Management</a>,
