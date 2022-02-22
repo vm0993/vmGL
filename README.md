@@ -1,6 +1,7 @@
 # NOTES
 
-Pending Project Update.
+This Project will be update completed soon. 
+Current project not use Multi Tenancy and Multi Database, Multi Tenancy and Multi Database with custom Domain on private repo and only separate user have to access with agreement.
 
 # ViMa
 ViMa is a suite of web based open source business apps.
