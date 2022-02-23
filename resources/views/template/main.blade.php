@@ -83,64 +83,7 @@
         <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
         <script>
 
-            var firebaseConfig = {
-                apiKey: "AIzaSyBwQQ0xDNCCJY2j8JkfdUNjKbjt035yHao",
-                authDomain: "vimaapp-32500.firebaseapp.com",
-                projectId: "vimaapp-32500",
-                storageBucket: "vimaapp-32500.appspot.com",
-                messagingSenderId: "693288984780",
-                appId: "1:693288984780:web:1e8e73f0bbfcf282aca269",
-                measurementId: "G-5LV9FWRJH9"
-            };
             
-            firebase.initializeApp(firebaseConfig);
-            const messaging = firebase.messaging();
-            console.log(messaging);
-        
-            function initFirebaseMessagingRegistration() {
-                    messaging
-                    .requestPermission()
-                    .then(function () {
-                        return messaging.getToken()
-                    })
-                    .then(function(token) {
-                        console.log(token);
-        
-                        $.ajaxSetup({
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            }
-                        });
-        
-                        $.ajax({
-                            url: '{{ route("store-token") }}',
-                            type: 'PATCH',
-                            data: {
-                                token: token
-                            },
-                            dataType: 'JSON',
-                            success: function (response) {
-                                alert('Token saved successfully.');
-                            },
-                            error: function (err) {
-                                console.log('User Chat Token Error'+ err);
-                            },
-                        });
-        
-                    }).catch(function (err) {
-                        console.log('User Chat Token Error'+ err);
-                    });
-            }  
-            
-            messaging.onMessage(function(payload) {
-                const noteTitle = payload.notification.title;
-                const noteOptions = {
-                    body: payload.notification.body,
-                    icon: payload.notification.icon,
-                };
-                new Notification(noteTitle, noteOptions);
-            });
-        
         </script>
     </body>
 </html>
