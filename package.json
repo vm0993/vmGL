@@ -28,7 +28,7 @@
         "@popperjs/core": "^2.4.4",
         "cash-dom": "^8.0.0",
         "chart.js": "^2.9.3",
-        "dayjs": "^1.8.33",
+        "dayjs": "^1.10.8",
         "dropzone": "^5.7.2",
         "feather-icons": "^4.28.0",
         "highlight.js": "^10.6.0",
