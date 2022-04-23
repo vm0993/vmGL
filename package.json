@@ -30,7 +30,7 @@
         "chart.js": "^2.9.3",
         "dayjs": "^1.8.33",
         "dropzone": "^5.7.2",
-        "feather-icons": "^4.28.0",
+        "feather-icons": "^4.29.0",
         "highlight.js": "^10.6.0",
         "imask": "^6.4.2",
         "js-beautify": "^1.11.0",
