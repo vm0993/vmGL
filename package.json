@@ -25,7 +25,7 @@
         "@fullcalendar/list": "^5.5.0",
         "@fullcalendar/timegrid": "^5.5.1",
         "@left4code/tw-starter": "^1.1.0",
-        "@popperjs/core": "^2.11.3",
+        "@popperjs/core": "^2.11.5",
         "cash-dom": "^8.0.0",
         "chart.js": "^2.9.3",
         "dayjs": "^1.10.8",
