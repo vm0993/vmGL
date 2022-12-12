@@ -9,6 +9,12 @@ Current project not use Multi Tenancy and Multi Database, Multi Tenancy and Mult
 
 ![alt text](https://github.com/vm0993/vmGL/blob/main/jurnal.jpg?raw=true)
 
+HRIS Module
+![alt text](https://github.com/vm0993/vmGL/blob/main/hris.png?raw=true)
+
+ESS (Employee Self Service)
+![alt text](https://github.com/vm0993/vmGL/blob/main/ess_hris.png?raw=true)
+
 WILL BE UPDATE ALL IN DES 2022
 
 # ViMa
