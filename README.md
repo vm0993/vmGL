@@ -1,5 +1,7 @@
 # NOTES
 
+Sumber Utama Project ini adalah SaaS Multi Tenant konsep.. utk SaaS nya sendiri sudah berjalan, sedangkan dalam project ini akan dibuat single sistem.. tanpa multi tenant, module mengambil dari module-module yang ada di SaaS yang sudah berjalan. untuk versi iOS Native mungkin baru akan release tahun depan setelah versi SaaS mobilenya release publik termasuk HRISnya.
+
 This Project will be update completed soon. 
 Current project not use Multi Tenancy and Multi Database, Multi Tenancy and Multi Database with custom Domain on private repo and only separate user have to access with agreement.
 
