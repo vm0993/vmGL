@@ -15,7 +15,7 @@ HRIS Module
 ESS (Employee Self Service)
 ![alt text](https://github.com/vm0993/vmGL/blob/main/ess_hris.png?raw=true)
 
-WILL BE UPDATE ALL IN DES 2022
+WILL BE UPDATE AFTER ALL MY PROJECT DONE!
 
 # ViMa
 ViMa is a suite of web based open source business apps.
